@@ -501,7 +501,7 @@ textarea.input {
 
 .speaker {
   position: relative;
-  cursor: pointer;
+  /*cursor: pointer;*/
   margin-bottom: 30px;
 }
 
