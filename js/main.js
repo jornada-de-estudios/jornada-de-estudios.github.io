@@ -45,7 +45,7 @@
 			});
 		});
 	});
-
+/*
 	// Galery Owl
 	$('#galery-owl').owlCarousel({
 		items:1,
@@ -66,7 +66,7 @@
 	    }
 		}
 	});
-
+*/
 	// Parallax Background
 	$.stellar({
 		responsive: true
