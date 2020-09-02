@@ -63,7 +63,8 @@
       	@font-face {
 		font-family: "Gotham Narrow Light";
 		src: url("./fonts/GothamNarrow-Light.otf") format("opentype"),
-		url("./fonts/GothamNarrow-Light.otf") format("opentype")
+		url("./fonts/GothamNarrow-Light.otf") format("opentype"),
+		url('.fonts/gothamnarrow-light-webfont.woff') format("woff");
 		}
 		.iframe-container {
 		overflow: hidden;
@@ -78,6 +79,10 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
+		}
+
+		body {
+			font-family: "Gotham Narrow Light", sans-serif;
 		}
 
 
@@ -114,16 +119,26 @@
 
 			<nav id="nav">
 				<ul class="main-nav nav navbar-nav navbar-right">
-					<!--
-					<li><a href="http://inscripcion.cristiandad.cl/" title="Para poder asistir a la Misa en Santiago">· Inscripción</a></li>
-					-->
+				
+					<li >
+						<a  href="http://domingo.cristiandad.cl/" title="Para poder asistir a la Misa mayor del domingo en Santiago">
+							<span class="btn btn-success">
+							 🆕 Inscripción Misa Mayor (Santiago)
+						</span>
+						</a>
+					</li>
+					
 				</ul>
 			</nav>
 
 			<nav id="nav">
 				<ul class="main-nav nav navbar-nav navbar-right">
 					<!-- <li><a href="https://www.twitch.tv/cristiandad_cl/videos">· Transmisiones pasadas</a></li> -->
-					<li><a href="https://www.youtube.com/channel/UCbTpy27w8VuIFFf5NxiSmZg">· Transmisiones pasadas</a></li>
+					<li><a href="https://www.youtube.com/channel/UCbTpy27w8VuIFFf5NxiSmZg"> 
+						<span class="btn btn-dark">
+						Ver transmisiones pasadas
+						</span>
+					</a></li>
 					
 				</ul>
 			</nav>
@@ -350,4 +365,5 @@ Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 
 </body>
 
+<!--D.O.M.-->
 </html>
