@@ -235,7 +235,7 @@ textarea.input {
 #header {
   position: relative;
   background-color: #FFF;
-  border-bottom: 1px solid #0000001a;
+  /*border-bottom: 1px solid #0000001a;*/
   z-index: 80;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
@@ -247,7 +247,7 @@ textarea.input {
   right: 0;
   top: 0;
   background-color: transparent;
-  border-bottom: 1px solid #DADADA30;
+  /* border-bottom: 1px solid #DADADA30; */
 }
 
 #header.fixed-navbar {
