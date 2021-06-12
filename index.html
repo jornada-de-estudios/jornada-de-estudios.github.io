@@ -244,6 +244,9 @@
 	</div>
 	<!-- /Home -->
 
+
+
+
 	<div id="schedule" class="section">
 		<div class="container">
 			<div class="row">
@@ -266,6 +269,88 @@
 					</p>
 					<p>
 						<a href="https://www.youtube.com/playlist?list=PLuwSXVounOlhSXNLkp1eZeigDdghscW14">Ver todos los
+							sermones de esta serie</a>
+					</p>
+				</div>
+			</div>
+		</div>
+
+			<!-- CTA -->
+				<div id="cta" class="section">
+					<!-- background image -->
+					<div class="section-bg" style="background-image:url(./img/Massonship.jpg); filter:brightness(.5)"
+						data-stellar-background-ratio="0.4"></div>
+					<!-- /background image -->
+		
+					<!-- container -->
+					<div class="container">
+						<!-- container -->
+						<div class="row">
+							<!-- cta content -->
+							<div class="col-md-8 col-md-offset-2">
+								<div class="cta-content text-center" style="color:#eeeeee">
+									<h2 style="color:azure">
+										Vea el último video disponible
+									</h2>
+		
+								
+									<iframe class="latestVideoEmbed" vnum='0' cid="UCbTpy27w8VuIFFf5NxiSmZg" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+									<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+									<script>
+									var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+									function loadVideo(iframe) {
+									$.getJSON(reqURL + iframe.getAttribute('cid'),
+										function(data) {
+										var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
+										console.log(videoNumber);
+										var link = data.items[videoNumber].link;
+										id = link.substr(link.indexOf("=") + 1);
+										iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
+										}
+									);
+									}
+									var iframes = document.getElementsByClassName('latestVideoEmbed');
+									for (var i = 0, len = iframes.length; i < len; i++) {
+									loadVideo(iframes[i]);
+									}
+									</script>
+
+
+									<div class="home-content" >
+										<a class="main-btn" href='https://www.youtube.com/channel/UCbTpy27w8VuIFFf5NxiSmZg'>Vea todos los sermones en el canal de Youtube del Priorato</a>
+									</div>
+								</div>
+							</div>
+							<!-- /cta content -->
+						</div>
+						<!-- /row -->
+					</div>
+					<!-- /container -->
+				</div>
+				<!-- /CTA -->
+		
+	<div id="schedule" class="section">
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<h3 class="title"><span>Sobre la <span style="color: #800000;">misa nueva</span></h3></span>
+					</h3>
+					<p>
+					<h4>
+						Serie de sermones del R.P. González sobre cómo la misa nueva es contraria a la doctrina tradicional.
+					</h4>
+					</p>
+					<p>
+						<iframe width="100%" height="660"
+							src="https://www.youtube-nocookie.com/embed/videoseries?list=PLuwSXVounOlj2Y7x9rE4cP2Kk5cn8A7B_"
+							title="YouTube video player" frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen></iframe>
+
+					</p>
+					<p>
+						<a href="https://www.youtube.com/playlist?list=PLuwSXVounOlj2Y7x9rE4cP2Kk5cn8A7B_">
+							Ver todos los
 							sermones de esta serie</a>
 					</p>
 				</div>
