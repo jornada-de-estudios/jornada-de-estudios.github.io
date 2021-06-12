@@ -142,6 +142,17 @@
 
 				</ul>
 			</nav>
+
+			<nav id="nav">
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="watch.html">
+							<span class="btn btn-dark">
+								Ir a la transmisión de la misa
+							</span>
+						</a></li>
+
+				</ul>
+			</nav>
 			<!-- /Navigation -->
 
 
@@ -160,30 +171,43 @@
 		<!-- home wrapper -->
 		<div class="home-wrapper">
 			<!-- container -->
-			<div class="container">
-
+			<div class="container"> 
+				<p></p>
+				
 				<video width="100%" controls autoplay>
 					<source src="assets/buenpastor.mp4" type="video/mp4" autoplay>
 					<!-- <source src="assets/ayudemos a nuestro seminario.mp4" type="video/mp4"> -->
 				</video>
 				<div style="color: white">
-				
-						<div style='  display: grid; 
-						grid-template-columns: 1fr 1fr; 
+					<div class="home-content" >
+						<a class="main-btn" href='watch.html'>Para ver la transmisión de la misa, presione aquí</a>
+					</div>
+					
+					<div style='  display: grid; 
+						grid-template-columns: 0.3fr 0.2fr 0.2fr 0.3fr; 
 						grid-template-rows: 0.1fr 0.9fr; 
 						gap: 10px 10px; 
 						grid-template-areas: 
-						"cta cta"
-						"efe ban"; 
+						"r1 cta cta r2 "
+						"r1 efe ban r2"; 
 						
 						'>
+						<div style="grid-area: r1; font-size: x-large;"></div>
+						<div style="grid-area: r2; font-size: x-large;"></div>
+
 						<div style="grid-area: cta; font-size: x-large;">
 							<p></p>
 							Haga su aporte al Seminario hasta el domingo 13 de junio:
 						</div>
-						<div style="grid-area: efe; text-align: right;">💵 En efectivo, directo en el Priorato</div>
+						<div style="grid-area: efe; text-align: left;">
+							En efectivo:
+							<ul style="padding-left: 14.88px;"> 
+								<li>Directo en el Priorato</li>
+
+							</ul>
+							</div>
 						<div style="grid-area: ban; text-align: left;">
-							🏦 Mediante transferencia:
+							Mediante transferencia:
 							<ul style="padding-left: 14.88px;">
 								Fundación San Pío X
 								<li>Banco: <b>Scotiabank</b></li>
@@ -198,9 +222,6 @@
 
 				</div>
 
-				<div class="home-content">
-					<a class="main-btn" href='watch.html'>Para ver la transmisión de la misa, presione aquí</a>
-				</div>
 				<!-- <iframe
 				src="https://player.twitch.tv/?channel=cristiandad_cl&parent=cristiandad.cl&muted=false"
 				height="720"
