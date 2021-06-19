@@ -376,10 +376,18 @@ textarea.input {
 	HOME
 ===========================================================*/
 
+@media (orientation: landscape) and (max-width: 800px){
 #home {
-  height: 140vh;
+  height: 180vh;
   position: relative;
 }
+}
+
+#home {
+    height: 150vh;
+    position: relative;
+  }
+  
 
 #home .home-wrapper {
   position: absolute;
