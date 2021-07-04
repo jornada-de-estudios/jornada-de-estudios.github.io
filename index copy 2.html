@@ -16,6 +16,7 @@
 	<meta property="og:locale" content="es_ES" />
 	<meta name=”robots” content="index, follow">
 
+	<!-- favicon -->
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico">
 	<link rel="icon" type="image/png" sizes="196x196" href="favicon-192.png">
@@ -40,14 +41,21 @@
 	<title>FSSPX Chile · Priorato Cristo Rey</title>
 
 
-	<!-- <link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
-	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" /> -->
-
-	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<!-- Bootstrap -->
 	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
+	<!-- Owl Carousel -->
+	<link type="text/css" rel="stylesheet" href="css/owl.carousel.css" />
+	<link type="text/css" rel="stylesheet" href="css/owl.theme.default.css" />
+
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+
+	<!-- Custom stlylesheet -->
 	<link type="text/css" rel="stylesheet" href="css/style.css" />
 
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
 			  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -59,6 +67,22 @@
 				url("./fonts/GothamNarrow-Light.otf") format("opentype"),
 				url('.fonts/gothamnarrow-light-webfont.woff') format("woff");
 		}
+/* 
+		.iframe-container {
+			overflow: hidden;
+			padding-top: 24.25%;
+			position: relative;
+		}
+
+		.iframe-container iframe {
+			border: 0;
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		} */
+
 		body {
 			font-family: "Gotham Narrow Light", sans-serif;
 		}
@@ -68,34 +92,95 @@
 </head>
 
 <body>
+	<!-- Header -->
 	<header id="header" class="transparent-navbar">
+		<!-- container -->
 		<div class="container">
+			<!-- navbar header -->
 			<div class="navbar-header">
+				<!-- Logo -->
 				<div class="navbar-brand">
 					<a class="logo" href="index.html">
+
 						<img class="logo-img" src="./img/sspx_logo_white_wobg.png" alt="logo">
 						<img class="logo-alt-img" src="./img/sspx_logo_white_wobg.png" alt="logo">
+
 					</a>
+
 				</div>
+				<!-- /Logo -->
+
+				<!-- Mobile toggle -->
+				<!-- <button class="navbar-toggle">
+					<i class="fa fa-bars"></i>
+				</button> -->
+				<!-- /Mobile toggle -->
 			</div>
+
+			<!-- /navbar header -->
+
+
+			<!-- <nav id="nav">
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="pdf/msc-compressed.pdf">
+							<span class="btn btn-dark">
+								Mes del Sagrado Corazón
+							</span>
+						</a></li>
+
+				</ul>
+			</nav>
+
+			<nav id="nav">
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="pdf/promesas-sc.pdf">
+							<span class="btn btn-dark">
+								Las Promesas del Sagrado Corazón 🆕
+							</span>
+						</a></li>
+
+				</ul>
+			</nav>
+
+			<nav id="nav">
+				<ul class="main-nav nav navbar-nav navbar-right">
+					<li><a href="https://www.youtube.com/channel/UCbTpy27w8VuIFFf5NxiSmZg">
+							<span class="btn btn-dark">
+								Ver el Youtube del Priorato
+							</span>
+						</a></li>
+
+				</ul>
+			</nav> -->
+
+
+
+
 		</div>
+		<!-- /container -->
 	</header>
+	<!-- /Header -->
+
+	<!-- Home -->
 	<div id="home">
 		<div class="section-bg" style="background:black"></div>
 
 		<div class="home-wrapper">
 			<div class="container">
 				<div class="iframe-container">
+					<!-- <iframe width="100%" height="480" src="https://www.youtube-nocookie.com/embed/M6zJFglIbn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
 					<iframe width="100%" height="480" src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCbTpy27w8VuIFFf5NxiSmZg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<!-- <iframe src="https://player.twitch.tv/?channel=cristiandad_cl&parent=cristiandad.cl&muted=false"
+						height="480" width="100%" frameborder="0" scrolling="no" allowfullscreen="true">
+					</iframe> -->
 					<div class="row" style="color: white">
 						<div class="home-content">
-							<br>
 							<span style="font-size: medium;"><b>BINGO 2021</b>: Este domingo 4 de julio a las 14 horas</span><br>
 							<a class="main-btn" href='https://bingo.cristiandad.cl' 
 							style="font-size: large; background-color: #198754"
 							><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
 								<path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-							  </svg> Ingrese aquí al chat del Bingo</a>
+							  </svg> ¡Ingrese aquí al chat del Bingo!</a>
 						</div>
 
 					</div>
@@ -109,16 +194,26 @@
 
 
 
+	<!-- CTA -->
 	<div id="cta" class="section">
+		<!-- background image -->
+		<!-- <div class="section-bg" style="background-image:url(./img/Massonship.jpg); filter:brightness(.5)" -->
 		<div class="section-bg" style="background-color:#800000; filter:brightness(.5)"
 			data-stellar-background-ratio="0.4"></div>
+		<!-- /background image -->
+
+		<!-- container -->
 		<div class="container">
+			<!-- container -->
 			<div class="row">
+				<!-- cta content -->
 				<div class="col-md-8 col-md-offset-2">
 					<div class="cta-content text-center" style="color:#eeeeee">
 						<h3 style="color:azure">
 							Vea el último video disponible
 						</h3>
+
+
 						<iframe class="latestVideoEmbed" vnum='0' cid="UCbTpy27w8VuIFFf5NxiSmZg" width="100%"
 							height="340" frameborder="0" allowfullscreen></iframe>
 						<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -148,13 +243,63 @@
 						</div>
 					</div>
 				</div>
+				<!-- /cta content -->
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /container -->
 	</div>
+	<!-- /CTA -->
 
 
 
 
+
+
+	<!-- <div id="schedule" class="section" >
+		<div class="container">
+			<div class="row">
+				<div class="section-title">
+					<h3 class="title">
+						Mes del <span style="color: #800000;">Sagrado Corazón</span>
+					</h3>
+				</div>
+			</div>
+			<div class="row" style="text-align: center">
+				<div class="col-md-6">
+					<h3 class="title">
+						Las  <span style="color: #800000;">promesas</span> del Sagrado Corazón
+					</h3>
+					<h4>
+						Folleto del R.P. Luiz Claudio Camargo sobre las promesas del Sagrado Corazón a 
+						sus devotos.
+					</h4>
+					<p>
+						<a class="main-btn"
+							href="pdf/promesas-sc.pdf">
+							Descargar: Las promesas del Sagrado Corazón</a>
+					</p>
+
+				</div>
+				<div class="col-md-6" >
+					<h3 class="title">
+						Mes del <span style="color: #800000;">Sagrado Corazón</span>
+					</h3>
+					<h4>
+						Libro con extractos de lso escritos de Santa Margarita María, con una lectura diaria para 
+						cada día del mes del Sagrado Corazón.
+					</h4>
+					<p>
+						<a class="main-btn"
+							href="pdf/msc-compressed.pdf">
+							Descargar: Mes del Sagrado Corazón</a>
+					</p>
+				</div>
+			</div>
+
+
+		</div>
+	</div> -->
 
 	<div id="schedule" class="section" >
 		<div class="container">
@@ -173,6 +318,11 @@
 					<h4>
 						Serie de sermones del R.P. Camargo sobre el Sacramento de la Penitencia, siguiendo una obra de Dom Columba Marmion, osb.
 					</h4>
+					<!-- <iframe width="80%" height="80%"
+						src="https://www.youtube-nocookie.com/embed/videoseries?list=PLuwSXVounOljRwTxIox21nr00nBaAoH-b"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe> -->
 					<p>
 						<a class="main-btn"
 							href="https://www.youtube.com/playlist?list=PLuwSXVounOljRwTxIox21nr00nBaAoH-b">
@@ -187,6 +337,11 @@
 						Serie de sermones del R.P. González sobre cómo la misa nueva es contraria a la doctrina
 						tradicional.
 					</h4>
+					<!-- <iframe width="80%" height="100%"
+						src="https://www.youtube-nocookie.com/embed/videoseries?list=PLuwSXVounOlj2Y7x9rE4cP2Kk5cn8A7B_"
+						title="YouTube video player" frameborder="0"
+						allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe> -->
 					<p>
 						<a class="main-btn"
 							href="https://www.youtube.com/playlist?list=PLuwSXVounOlj2Y7x9rE4cP2Kk5cn8A7B_">
@@ -204,11 +359,18 @@
 
 
 
+	<!-- CTA -->
 	<div id="cta" class="section">
+		<!-- background image -->
 		<div class="section-bg" style="background-image:url(./img/bghorarios.webp); filter:brightness(.5)"
 			data-stellar-background-ratio="0.4"></div>
+		<!-- /background image -->
+
+		<!-- container -->
 		<div class="container">
+			<!-- container -->
 			<div class="row">
+				<!-- cta content -->
 				<div class="col-md-8 col-md-offset-2">
 					<div class="cta-content text-center" style="color:#eeeeee">
 						<h2 style="color:azure">
@@ -225,12 +387,21 @@
 						</p>
 					</div>
 				</div>
+				<!-- /cta content -->
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /container -->
 	</div>
+	<!-- /CTA -->
+
+	<!-- Contact -->
 	<div id="contact" class="section">
+		<!-- container -->
 		<div class="container">
+			<!-- row -->
 			<div class="row">
+				<!-- section title -->
 				<div class="section-title">
 					<h3 class="title"><span>Sobre el </span> <span style="color: #800000;">Priorato</span>
 					</h3>
@@ -262,9 +433,17 @@
 						detallados a continuación.
 					</p>
 
+					<p>
+					</p>
+					</p>
 				</div>
+				<!-- /section title -->
+
+				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
+
+
 						<h3>Dirección</h3>
 						<p>
 							<a href="https://goo.gl/maps/dJ6mh8dgAsr">
@@ -274,6 +453,9 @@
 						</p>
 					</div>
 				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
 						<h3>Donaciones</h3>
@@ -288,6 +470,9 @@
 						</p>
 					</div>
 				</div>
+				<!-- /contact -->
+
+				<!-- contact -->
 				<div class="col-sm-4">
 					<div class="contact">
 						<h3>Contacto</h3>
@@ -301,24 +486,70 @@
 
 					</div>
 				</div>
+				<!-- /contact -->
+
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /container -->
+
 	</div>
+	<!-- /Contact -->
+
+	<!-- Footer -->
 	<footer id="footer">
+		<!-- container -->
 		<div class="container">
+			<!-- row -->
 			<div class="row">
+
+				<!-- footer logo -->
+				<div class="col-md-4 col-md-push-4">
+					<div class="footer-brand">
+
+						<!-- contact social -->
+
+
+					</div>
+				</div>
+				<!-- /footer logo -->
+
+				<!-- contact social -->
 				<div class="col-md-4 col-md-push-4">
 				</div>
-				<div class="col-md-4 col-md-push-4">
-				</div>
+				<!-- /contact social -->
+
+
+				<!-- copyright -->
 				<div class="col-md-12" style="text-align: center;">
 					<span class="copyright" style="font-size: 8px; color:#aaaaaa">
-						Template by <a href="https://colorlib.com" target="_blank" rel="noreferrer">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						Template by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</span>
 				</div>
+				<!-- /copyright -->
+
 			</div>
+			<!-- /row -->
 		</div>
+		<!-- /container -->
 	</footer>
+	<!-- /Footer -->
+
+	<!-- jQuery Plugins -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.waypoints.min.js"></script>
+
+	<script src="js/jquery.stellar.min.js"></script>
+
+
+	<script src="js/jquery.countTo.js"></script>
+	<script src="js/main.js"></script>
+
 </body>
+
 <!--D.O.M.-->
+
 </html>

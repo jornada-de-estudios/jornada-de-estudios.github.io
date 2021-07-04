@@ -178,7 +178,7 @@ textarea.input {
   font-size: 42px;
   overflow: hidden;
 }
-
+/* 
 .section-title .title>span {
   -webkit-transform: translateY(100%);
   -ms-transform: translateY(100%);
@@ -193,7 +193,7 @@ textarea.input {
   -webkit-transform: translateY(0%);
   -ms-transform: translateY(0%);
   transform: translateY(0%);
-}
+} */
 
 /*=========================================================
 	LOGO
