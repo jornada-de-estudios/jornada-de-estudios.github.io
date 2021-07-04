@@ -15,6 +15,8 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="es_ES" />
 	<meta name=”robots” content="index, follow">
+	<link rel="preload" href="./fonts/GothamNarrow-Light.woff" as="font" type="font/woff2" crossorigin> 
+	<link rel="preload" href="./fonts/GothamNarrow-Light.otf" as="font" type="font/otf" crossorigin> 
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico">
@@ -56,8 +58,9 @@
 		@font-face {
 			font-family: "Gotham Narrow Light";
 			src: url("./fonts/GothamNarrow-Light.otf") format("opentype"),
-				url("./fonts/GothamNarrow-Light.otf") format("opentype"),
-				url('.fonts/gothamnarrow-light-webfont.woff') format("woff");
+			url("./fonts/GothamNarrow-Light.otf") format("opentype"),
+			url('.fonts/gothamnarrow-light-webfont.woff') format("woff");
+			font-display: swap
 		}
 		body {
 			font-family: "Gotham Narrow Light", sans-serif;
@@ -73,8 +76,8 @@
 			<div class="navbar-header">
 				<div class="navbar-brand">
 					<a class="logo" href="index.html">
-						<img class="logo-img" src="./img/sspx_logo_white_wobg.png" alt="logo">
-						<img class="logo-alt-img" src="./img/sspx_logo_white_wobg.png" alt="logo">
+						<img class="logo-img" src="./img/sspx_logo_white_wobg.png" alt="logo" width="50" height="50">
+						<img class="logo-alt-img" src="./img/sspx_logo_white_wobg.png" alt="logo" width="50" height="50">
 					</a>
 				</div>
 			</div>
