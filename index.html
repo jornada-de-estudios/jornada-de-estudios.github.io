@@ -7,6 +7,10 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<link rel="preload" href="fonts/GothamNarrow-Light.otf" as="font" type="font/otf" crossorigin> 
+	<link rel="dns-prefetch" href="http://www.youtube-nocookie.com">
+	<link rel="preconnect" href="http://www.youtube-nocookie.com">
+
 	<meta name="description" content="La Santa Misa Tradicional todos los días en vivo, transmitida desde el Priorato Cristo Rey, Santiago de Chile">
 	<meta property="og:title" content="Priorato Cristo Rey" />
 	<meta property="og:url" content="https://cristiandad.cl/" />
@@ -15,8 +19,6 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:locale" content="es_ES" />
 	<meta name=”robots” content="index, follow">
-	<link rel="preload" href="./fonts/gothamnarrow-light-webfont.woff" as="font" type="font/woff2" crossorigin> 
-	<link rel="preload" href="./fonts/GothamNarrow-Light.otf" as="font" type="font/otf" crossorigin> 
 
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="icon" sizes="16x16 32x32 64x64" href="favicon.ico">
@@ -38,7 +40,7 @@
 	<meta name="msapplication-TileColor" content="#FFFFFF">
 	<meta name="msapplication-TileImage" content="favicon-144.png">
 	<meta name="msapplication-config" content="browserconfig.xml">
-
+	<script src="js/lazysizes.min.js" async=""></script>
 	<title>FSSPX Chile · Priorato Cristo Rey</title>
 
 
@@ -57,8 +59,7 @@
 	<style type="text/css">
 		@font-face {
 			font-family: "Gotham Narrow Light";
-			src: url("./fonts/GothamNarrow-Light.otf") format("opentype"),
-			url('.fonts/gothamnarrow-light-webfont.woff') format("woff");
+			src: url("fonts/GothamNarrow-Light.otf") format("opentype");
 			font-display: swap
 		}
 		body {
@@ -88,7 +89,15 @@
 		<div class="home-wrapper">
 			<div class="container">
 				<div class="iframe-container">
-					<iframe title="La Misa de hoy" width="100%" height="480" src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCbTpy27w8VuIFFf5NxiSmZg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					<iframe
+					 class="lazyload"
+					 title="La Misa de hoy" 
+					 width="100%" 
+					 height="480" 
+					 data-src="https://www.youtube-nocookie.com/embed/live_stream?channel=UCbTpy27w8VuIFFf5NxiSmZg" 
+					 frameborder="0" 
+					 allow="autoplay; encrypted-media" 
+					 allowfullscreen></iframe>
 					<div class="row" style="color: white">
 						<div class="home-content">
 							<p></p>
