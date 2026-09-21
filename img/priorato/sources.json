@@ -1,0 +1,51 @@
+[
+  {
+    "source": "IMG_4144.jpg",
+    "output": "img/priorato/misa-altar-800.webp",
+    "width": 800,
+    "height": 533,
+    "bytes": 67714
+  },
+  {
+    "source": "IMG_4144.jpg",
+    "output": "img/priorato/misa-altar-1600.webp",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 191822
+  },
+  {
+    "source": "IMG_3738.jpg",
+    "output": "img/priorato/interior-iglesia-800.webp",
+    "width": 800,
+    "height": 533,
+    "bytes": 53128
+  },
+  {
+    "source": "IMG_3738.jpg",
+    "output": "img/priorato/interior-iglesia-1600.webp",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 154300
+  },
+  {
+    "source": "IMG_4502.jpg",
+    "output": "img/priorato/misal-800.webp",
+    "width": 800,
+    "height": 533,
+    "bytes": 38898
+  },
+  {
+    "source": "IMG_4502.jpg",
+    "output": "img/priorato/misal-1600.webp",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 139146
+  },
+  {
+    "source": "IMG_3788.jpg",
+    "output": "img/priorato/misa-horarios-800.webp",
+    "width": 800,
+    "height": 1200,
+    "bytes": 92418
+  }
+]

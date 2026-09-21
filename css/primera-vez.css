@@ -64,7 +64,7 @@
 .visit-faq-grid details[open] summary:after { content:"−"; }
 .visit-faq-grid summary:focus-visible { outline:2px solid var(--visit-blue); outline-offset:4px; }
 .visit-faq-grid details p { color:var(--visit-muted); font-size:.88rem; padding:0 1.5rem .5rem 0; }
-.visit-welcome { padding:4rem 0; text-align:center; background:linear-gradient(#ffffffeb,#ffffffed),url('../img/IMG_7935.jpg') center 60%/cover; }
+.visit-welcome { padding:4rem 0; text-align:center; background:linear-gradient(#ffffffeb,#ffffffed),url('../img/priorato/misa-altar-800.webp') center 60%/cover; }
 .visit-welcome h2 { font-size:clamp(2rem,3.6vw,3rem); }
 .first-visit main .visit-welcome p { max-width:680px; margin:0 auto 1.5rem; }
 .visit-welcome .visit-eyebrow { color:var(--visit-blue); }

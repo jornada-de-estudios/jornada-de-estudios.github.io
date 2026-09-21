@@ -103,7 +103,7 @@ The calendar page would render that content into the same visual template each w
 
 1. Confirm the final parish name, subtitle, contact details, and public email.
 2. Replace provisional homepage copy with approved Spanish wording.
-3. Choose or photograph the final hero and section images.
+3. Use the user-provided photo collection first for hero and section images; see `SOURCES.md` for the location, selection and optimization details.
 4. Decide whether the weekly source image should also be downloadable.
 5. Rebuild the existing music page within the new visual system as the choir section.
 6. Add the remaining pages using the shared header, footer, typography, and network menus.
@@ -140,4 +140,7 @@ Review copy, images, mobile behavior, accessibility, search indexing, link integ
 - Actual SSPX `Century-Light` font loaded locally
 - Actual SSPX logo asset used in the site shell
 - Existing PDFs, YouTube channel, Librería Fátima link, and music archive retained
-- Homepage copy and image choices still provisional
+- Preferred photo source and selected optimized exports documented in `SOURCES.md`
+- Direct calendar access remains visible in the mobile header; desktop homepage includes a calendar strip above the hero
+- September 2026 Estrella Solitaria bulletin available from Recursos, with two complete, attributed articles and the original PDF
+- Homepage copy remains subject to editorial review

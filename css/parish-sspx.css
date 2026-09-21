@@ -55,7 +55,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .hero-dot.is-active { background:#fff; }
 
 .intro-grid { display:grid; grid-template-columns:1.1fr 1fr .8fr; gap:1.2rem; padding-top:3rem; padding-bottom:4.5rem; }
-.intro-image { min-height:20rem; background:url("../img/bghorarios.jpg") center/cover; }
+.intro-image { min-height:20rem; background:url("../img/priorato/misa-horarios-800.webp") center/cover; }
 .intro-copy, .intro-card { padding:1.1rem 1.35rem 1.4rem; }
 .intro-copy { border-top:3px solid var(--red); }
 .intro-copy h2 { margin:.5rem 0 .8rem; font:400 2.35rem/1.1 var(--serif); }
@@ -99,7 +99,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .location-panel .line-link { display:inline-block; margin-top:1rem; color:#fff; border-color:var(--orange); }
 .location-panel > div:last-child .line-link { color:var(--red); border-color:var(--red); }
 .media-feature { display:grid; grid-template-columns:1.15fr .85fr; min-height:21rem; }
-.media-feature-image { background:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.05)),url("../img/IMG_7935.jpg") center/cover; }
+.media-feature-image { background:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.05)),url("../img/priorato/misa-altar-800.webp") center/cover; }
 .media-feature-copy { padding:2.2rem; background:#101010; color:#fff; }
 .media-feature-copy h2 { margin:.6rem 0 1rem; font:400 2.5rem/1.1 var(--serif); }
 .media-feature-copy p { color:rgba(255,255,255,.75); }
@@ -154,8 +154,8 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .media-section { background:#fff; }
 .media-grid { display:grid; grid-template-columns:1.1fr 1fr; gap:1rem; }
 .media-card { min-height:19rem; padding:1.8rem; display:flex; flex-direction:column; justify-content:space-between; background-position:center; background-size:cover; }
-.media-card-video { background-image:linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,.12)), url("../img/IMG_7935.jpg"); color:#fff; }
-.media-card-class { background-image:linear-gradient(0deg, rgba(0,0,0,.78), rgba(0,0,0,.14)), url("../img/background01.jpg"); color:#fff; }
+.media-card-video { background-image:linear-gradient(0deg, rgba(0,0,0,.8), rgba(0,0,0,.12)), url("../img/priorato/misa-altar-800.webp"); color:#fff; }
+.media-card-class { background-image:linear-gradient(0deg, rgba(0,0,0,.78), rgba(0,0,0,.14)), url("../img/priorato/misal-800.webp"); color:#fff; }
 .media-card-music { background:var(--red); color:#fff; }
 .media-card .section-kicker { color:var(--orange); }
 .media-card h3 { margin:.6rem 0 0; font:400 1.8rem/1.12 var(--serif); }
@@ -242,4 +242,36 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
   .footer-top, .footer-bottom { align-items:flex-start; flex-direction:column; }
 }
 
+.mobile-quick-nav { display:none; }
+.weekly-shortcut { background:var(--blue); color:#fff; }
+.weekly-shortcut .container { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding-top:1rem; padding-bottom:1rem; }
+.weekly-shortcut strong { font-weight:500; }
+.weekly-shortcut a { text-decoration:underline; text-underline-offset:4px; }
+.article-width { max-width:760px; }
+.article-body { padding-top:2rem; padding-bottom:4rem; line-height:1.8; }
+.article-body h2 { margin-top:2rem; font:400 2rem/1.2 var(--serif); }
+.article-photo { width:100%; height:auto; display:block; }
+.page-intro .article-note { margin-top:1rem; font-size:.9rem; }
+.article-source { padding:1.5rem; margin-top:2rem; background:var(--wash); border-left:3px solid var(--red); }
+.article-source p { margin:.5rem 0 1rem; }
+.bulletin-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.resource-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.media-feature > div { min-width:0; overflow-wrap:anywhere; }
+@media (max-width:800px) {
+  .site-header { position:sticky; top:0; }
+  .header-main { gap:.6rem; }
+  .mobile-quick-nav { display:flex; background:var(--blue); color:#fff; }
+  .mobile-quick-nav a { display:flex; align-items:center; justify-content:center; min-height:48px; padding:.6rem .75rem; font-size:.78rem; line-height:1.35; }
+  .mobile-quick-nav a:first-child { flex:1; gap:.6rem; font-weight:500; }
+  .mobile-quick-nav a:last-child { border-left:1px solid #ffffff40; }
+  .mobile-quick-nav a[aria-current] { text-decoration:underline; text-underline-offset:4px; }
+  .network-panel { max-height:calc(100dvh - 125px); overflow-y:auto; }
+  .weekly-shortcut { display:none; }
+  .hero-slide { background-image:linear-gradient(90deg, rgba(0,0,0,.14), rgba(0,0,0,.05)), var(--hero-image-mobile); }
+  .hero-slides, .hero-slide { min-height:31rem; }
+  .hero-caption { background:rgba(0,0,0,.8); }
+  .bulletin-grid, .resource-grid { grid-template-columns:1fr; }
+  [id] { scroll-margin-top:9rem; }
+  .brand-copy small { font-size:.65rem; }
+}
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:.01ms !important; } }

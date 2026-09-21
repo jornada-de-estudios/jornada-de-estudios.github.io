@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/parish-sspx.css?v=5">
+  <link rel="stylesheet" href="css/parish-sspx.css?v=7">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -68,18 +68,19 @@
         </section>
       </div>
     </div>
-  </header>
+  <nav class="mobile-quick-nav" aria-label="Accesos rápidos"><a href="calendario.html">Calendario de esta semana <span aria-hidden="true">›</span></a><a href="horarios.html">Horarios de Misa</a></nav></header>
 
   <main id="contenido">
+    <div class="weekly-shortcut"><div class="container"><strong>Esta semana en el Priorato</strong><a href="calendario.html">Ver calendario de Misas y actividades <span aria-hidden="true">›</span></a></div></div>
     <section class="hero" aria-label="Destacados del Priorato">
       <div class="hero-slides" id="hero-slides">
-        <article class="hero-slide is-active" style="--hero-image: url('/img/IMG_7935.jpg')">
+        <article class="hero-slide is-active" style="--hero-image: url('/img/priorato/misa-altar-1600.webp'); --hero-image-mobile: url('/img/priorato/misa-altar-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Priorato Cristo Rey · Santiago de Chile</span><h1>La Santa Misa tradicional</h1><p>Horarios, dirección y avisos del Priorato.</p><a href="#misa">Ver horarios <span aria-hidden="true">›</span></a></div>
         </article>
-        <article class="hero-slide" style="--hero-image: url('/img/bghorarios.jpg')">
+        <article class="hero-slide" style="--hero-image: url('/img/priorato/interior-iglesia-1600.webp'); --hero-image-mobile: url('/img/priorato/interior-iglesia-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Misa tridentina en Chile</span><h1>Primera vez en la Misa tradicional</h1><p>No necesitas saber latín ni conocer las ceremonias.</p><a href="primera-vez.html">Información para tu primera visita <span aria-hidden="true">›</span></a></div>
         </article>
-        <article class="hero-slide" style="--hero-image: url('/img/background01.jpg')">
+        <article class="hero-slide" style="--hero-image: url('/img/priorato/misal-1600.webp'); --hero-image-mobile: url('/img/priorato/misal-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Biblioteca del Priorato</span><h1>Lecturas y devociones</h1><p>Material de lectura y devoción disponible en línea.</p><a href="#recursos">Explorar recursos <span aria-hidden="true">›</span></a></div>
         </article>
       </div>
@@ -133,7 +134,7 @@
     <section class="section resource-section" id="recursos" aria-labelledby="resource-title">
       <div class="container">
         <div class="section-title"><div><span class="section-kicker">Biblioteca del Priorato</span><h2 id="resource-title">Recursos</h2></div><a class="line-link" href="recursos.html">Ver todos <span aria-hidden="true">›</span></a></div>
-        <div class="resource-grid">
+        <div class="resource-grid"><a class="resource-card" href="boletin.html"><span class="section-kicker">Boletín · Septiembre 2026</span><h3>Estrella Solitaria</h3><p>Artículos y boletín completo</p><span class="resource-arrow" aria-hidden="true">›</span></a>
           <a class="resource-card" href="pdf/msc-compressed.pdf"><span class="section-kicker">PDF · Devoción</span><h3>Mes del Sagrado Corazón</h3><span class="resource-arrow" aria-hidden="true">↗</span></a>
           <a class="resource-card" href="pdf/promesas-sc.pdf"><span class="section-kicker">PDF · Lectura</span><h3>Promesas del Sagrado Corazón de Jesús</h3><span class="resource-arrow" aria-hidden="true">↗</span></a>
           <a class="resource-card resource-card-red" href="https://www.libreriafatima.cl/" target="_blank" rel="noopener"><span class="section-kicker">Librería</span><h3>Librería Fátima</h3><span class="resource-arrow" aria-hidden="true">↗</span></a>
