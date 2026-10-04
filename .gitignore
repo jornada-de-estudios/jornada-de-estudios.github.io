@@ -1,2 +1,7 @@
 output/*
 tmp/
+
+# Internal planning and maintenance documents (not website content)
+/SEO-MAINTENANCE.md
+/SITE-PLAN.md
+/SOURCES.md

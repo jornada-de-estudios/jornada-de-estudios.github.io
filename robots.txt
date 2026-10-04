@@ -1,0 +1,6 @@
+# Cloudflare may prepend its managed crawler preferences.
+# This origin file does not change those preferences.
+User-agent: *
+Allow: /
+
+Sitemap: https://cristiandad.cl/sitemap.xml

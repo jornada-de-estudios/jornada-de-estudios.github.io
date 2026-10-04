@@ -45,7 +45,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .hero-slide.is-active { position:relative; opacity:1; visibility:visible; }
 .hero-caption { width:min(34rem, 58%); padding:1.7rem 2rem 1.9rem; background:rgba(0,0,0,.73); }
 .caption-kicker, .section-kicker { display:block; color:var(--orange); font-size:.78rem; letter-spacing:.12em; text-transform:uppercase; }
-.hero-caption h1 { margin:.65rem 0 .75rem; font:400 clamp(2.45rem, 4vw, 4.1rem)/1.1 var(--serif); }
+.hero-caption :is(h1, h2) { margin:.65rem 0 .75rem; font:400 clamp(2.45rem, 4vw, 4.1rem)/1.1 var(--serif); }
 .hero-caption p { margin:0 0 1.15rem; color:rgba(255,255,255,.85); font-size:1.13rem; }
 .hero-caption a, .line-link { color:var(--red); border-bottom:1px solid currentColor; padding-bottom:.2rem; }
 .hero-caption a { color:#fff; border-color:var(--orange); }
@@ -210,7 +210,7 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
   .hero-slides { min-height:36rem; }
   .hero-slide { padding:0; align-items:flex-end; background-position:center; }
   .hero-caption { width:100%; padding:1.5rem 1rem 2.1rem; }
-  .hero-caption h1 { font-size:2.55rem; }
+  .hero-caption :is(h1, h2) { font-size:2.55rem; }
   .hero-caption p { font-size:1rem; }
   .page-intro { padding:3rem 0 2rem; }
   .page-intro h1 { font-size:3rem; }
@@ -275,3 +275,13 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
   .brand-copy small { font-size:.65rem; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:.01ms !important; } }
+
+/* Practical footer information and navigation matching breadcrumb metadata. */
+.footer-contact {display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;margin-top:1.5rem;color:rgba(255,255,255,.8);font-size:.85rem;overflow-wrap:anywhere;}
+.footer-contact a:hover {color:var(--orange);}
+.breadcrumbs {background:var(--wash);color:var(--muted);font-size:.8rem;}
+.breadcrumbs ol {display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin:0;padding:.8rem 0;}
+.breadcrumbs li+li::before {content:"/";margin-right:.5rem;}
+.breadcrumbs a {color:var(--red);}
+.location-panel > div {min-width:0;overflow-wrap:anywhere;}
+@media(max-width:800px) {.footer-contact {flex-direction:column;align-items:flex-start;}}
