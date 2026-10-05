@@ -98,6 +98,24 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .location-panel > div:last-child p { color:var(--muted); }
 .location-panel .line-link { display:inline-block; margin-top:1rem; color:#fff; border-color:var(--orange); }
 .location-panel > div:last-child .line-link { color:var(--red); border-color:var(--red); }
+.center-directory { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+.center-directory-card { overflow:hidden; border:1px solid var(--line); background:#fff; }
+.center-card-image { margin:0; }
+.center-card-image img { display:block; width:100%; height:clamp(14rem,25vw,20rem); aspect-ratio:16/9; object-fit:cover; }
+.center-card-image figcaption { padding:.65rem 1.25rem 0; color:var(--muted); font-size:.78rem; }
+.center-card-copy { padding:1.1rem 1.25rem 1.5rem; }
+.center-card-copy h2 { margin:.4rem 0 .7rem; font:400 1.8rem/1.12 var(--serif); }
+.center-card-copy p { margin:.45rem 0; color:var(--muted); font-size:.92rem; }
+.center-card-copy .line-link { display:inline-block; margin-top:.8rem; }
+.center-profile-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; gap:1.5rem; }
+.center-profile-photo { margin:0; }
+.center-profile-photo img { display:block; width:100%; max-height:42rem; object-fit:cover; border:1px solid var(--line); }
+.center-profile-photo figcaption { margin-top:.7rem; color:var(--muted); font-size:.82rem; }
+.center-profile-copy .detail-card { min-height:0; }
+.center-profile-copy address { margin:.6rem 0; color:var(--muted); font-style:normal; }
+.center-profile-copy .line-link { display:inline-block; margin-top:1rem; }
+.center-profile-actions { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; margin-top:1rem; }
+.center-profile-actions .line-link { margin-top:0; }
 .media-feature { display:grid; grid-template-columns:1.15fr .85fr; min-height:21rem; }
 .media-feature-image { background:linear-gradient(90deg,rgba(0,0,0,.12),rgba(0,0,0,.05)),url("../img/priorato/misa-altar-800.webp") center/cover; }
 .media-feature-copy { padding:2.2rem; background:#101010; color:#fff; }
@@ -132,6 +150,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .calendar-centers { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem; }
 .calendar-centers > div { display:flex; flex-direction:column; gap:.45rem; padding:1.35rem 1.5rem; background:var(--wash); border-top:3px solid var(--red); }
 .calendar-centers strong { font-family:var(--serif); font-size:1.25rem; font-weight:400; line-height:1.2; }
+.calendar-centers a { text-decoration:underline; text-decoration-color:var(--line); text-underline-offset:.18em; }
+.calendar-centers a:hover { color:var(--red); }
+.calendar-head a { border-bottom:1px solid rgba(198,38,44,.35); }
+.calendar-head a:hover { color:var(--blue); }
 .calendar-source-note { margin:1.25rem 0 0; color:var(--muted); font-size:.82rem; }
 
 .section { padding:5rem 0; }
@@ -214,7 +236,8 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
   .hero-caption p { font-size:1rem; }
   .page-intro { padding:3rem 0 2rem; }
   .page-intro h1 { font-size:3rem; }
-  .detail-grid, .location-panel, .media-feature, .link-list { grid-template-columns:1fr; }
+  .detail-grid, .location-panel, .media-feature, .link-list, .center-profile-grid { grid-template-columns:1fr; }
+  .center-directory { grid-template-columns:1fr; }
   .schedule-head { display:none; }
   .schedule-row { display:block; }
   .schedule-row > div { border-left:0; border-top:1px solid var(--line); }
