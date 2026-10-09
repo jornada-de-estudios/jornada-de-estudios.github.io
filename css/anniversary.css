@@ -48,7 +48,8 @@
  background-color:#341219;
  background-image:linear-gradient(90deg,rgba(40,10,16,.98) 0%,rgba(40,10,16,.93) 25%,rgba(40,10,16,.65) 46%,rgba(40,10,16,.05) 73%),url('../img/priorato/40-aniversario-1600.webp?v=2');
  background-position:center,right center;
- background-size:cover;
+ background-size:cover,auto 100%;
+ background-repeat:no-repeat;
 }
 .anniversary-banner .container { display:flex; min-height:36rem; padding-top:4rem; padding-bottom:4rem; }
 .anniversary-banner .container > div { width:min(570px,52%); }
@@ -59,14 +60,14 @@
 .anniversary-button:hover { background:#f4dcac; }
 @media(max-width:700px) {
  .anniversary-banner, .hero-slide.anniversary-slide {
-  background-image:linear-gradient(0deg,rgba(40,10,16,.99) 0%,rgba(40,10,16,.93) 36%,rgba(40,10,16,.35) 72%,rgba(40,10,16,.1) 100%),url('../img/priorato/40-aniversario-1600.webp?v=2');
-  background-position:center,65% top;
-  background-size:cover,auto 100%;
+  background-image:linear-gradient(180deg,transparent 85%,#341219 100%),url('../img/priorato/40-aniversario-1600.webp?v=2');
+  background-position:center top,center top;
+  background-size:100% calc(100vw * 2 / 3),100% auto;
  }
- .anniversary-banner .container { min-height:44rem; align-items:flex-end; padding-top:15rem; padding-bottom:2.5rem; }
+ .anniversary-banner .container { min-height:0; align-items:flex-end; padding-top:calc(100vw * 2 / 3 + 1rem); padding-bottom:2.5rem; }
  .anniversary-banner .container > div { width:100%; }
  .anniversary-banner h1 { font-size:3.1rem; }
- .anniversary-slide .container { min-height:37rem; padding-top:12rem; }
+ .anniversary-slide .container { min-height:0; padding-top:calc(100vw * 2 / 3 + 1rem); }
  .anniversary-slide h1 { font-size:2.75rem; }
 }
 
