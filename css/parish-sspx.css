@@ -313,3 +313,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .breadcrumbs a {color:var(--red);}
 .location-panel > div {min-width:0;overflow-wrap:anywhere;}
 @media(max-width:800px) {.footer-contact {flex-direction:column;align-items:flex-start;}}
+
+/* Homepage attendance information. */
+.schedule-label { margin:1.3rem 0 0; font-size:.85rem; font-weight:500; color:var(--muted); }
+.schedule-label + .mini-schedule { margin-top:.5rem; }
+.calendar-button { display:inline-block; margin-top:1rem; padding:.75rem 1rem; background:var(--red); color:#fff; font-size:.9rem; }
+.calendar-button:hover { background:var(--blue); }
+.intro-card p { margin:0 0 1.5rem; color:rgba(255,255,255,.8); }
