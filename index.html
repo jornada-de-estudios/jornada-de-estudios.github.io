@@ -81,6 +81,7 @@
   ]
 }
 </script>
+  <link rel="stylesheet" href="css/anniversary.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -141,8 +142,9 @@
     <div class="weekly-shortcut"><div class="container"><strong>Esta semana en el Priorato</strong><a href="calendario.html">Ver calendario de Misas y actividades <span aria-hidden="true">›</span></a></div></div>
     <section class="hero" aria-label="Destacados del Priorato">
       <div class="hero-slides" id="hero-slides">
-        <article class="hero-slide is-active" style="--hero-image: url('/img/priorato/misa-altar-1600.webp'); --hero-image-mobile: url('/img/priorato/misa-altar-800.webp')">
-          <div class="hero-caption"><span class="caption-kicker">Priorato Cristo Rey · Santiago de Chile</span><h1>La Santa Misa tradicional</h1><p>Horarios, dirección y avisos del Priorato.</p><a href="#misa">Ver horarios <span aria-hidden="true">›</span></a></div>
+        <article class="hero-slide anniversary-slide anniversary-banner is-active" data-anniversary><div class="container"><div><span class="section-kicker">15, 17 y 18 de octubre de 2026 · Santiago</span><h1>40 años de fe<br>y tradición</h1><p>Celebramos el aniversario del Priorato Cristo Rey con la Santa Misa, formación y encuentros en comunidad.</p><div class="anniversary-actions"><a class="anniversary-button" href="aniversario-40.html">Ver el programa del aniversario <span aria-hidden="true">→</span></a></div></div><img class="anniversary-art" src="img/priorato/40-aniversario.svg" width="400" height="400" alt="40 años · Priorato Cristo Rey"></div></article>
+        <article class="hero-slide" style="--hero-image: url('/img/priorato/misa-altar-1600.webp'); --hero-image-mobile: url('/img/priorato/misa-altar-800.webp')">
+          <div class="hero-caption"><span class="caption-kicker">Priorato Cristo Rey · Santiago de Chile</span><h2>La Santa Misa tradicional</h2><p>Horarios, dirección y avisos del Priorato.</p><a href="#misa">Ver horarios <span aria-hidden="true">›</span></a></div>
         </article>
         <article class="hero-slide" style="--hero-image: url('/img/priorato/interior-iglesia-1600.webp'); --hero-image-mobile: url('/img/priorato/interior-iglesia-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Misa tridentina en Chile</span><h2>Primera vez en la Misa tradicional</h2><p>No necesitas saber latín ni conocer las ceremonias.</p><a href="primera-vez.html">Información para tu primera visita <span aria-hidden="true">›</span></a></div>
@@ -155,10 +157,11 @@
         </article>
       </div>
       <div class="hero-controls" aria-label="Seleccionar destacado">
-        <button class="hero-dot is-active" type="button" aria-label="Mostrar destacado 1" aria-pressed="true"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar destacado 2" aria-pressed="false"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar destacado 3" aria-pressed="false"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar destacado 4" aria-pressed="false"></button>
+        <button class="hero-dot is-active" data-anniversary type="button" aria-label="Mostrar aniversario: 40 años" aria-pressed="true"></button>
+        <button class="hero-dot" type="button" aria-label="Mostrar la Santa Misa tradicional" aria-pressed="false"></button>
+        <button class="hero-dot" type="button" aria-label="Mostrar información para la primera visita" aria-pressed="false"></button>
+        <button class="hero-dot" type="button" aria-label="Mostrar lecturas y devociones" aria-pressed="false"></button>
+        <button class="hero-dot" type="button" aria-label="Mostrar calendario semanal" aria-pressed="false"></button>
       </div>
     </section>
 
@@ -166,7 +169,7 @@
       <a class="intro-image" href="#misa" aria-label="Ver horarios de Misa"></a>
       <div class="intro-copy" id="misa">
         <span class="section-kicker">Horarios de Misa en Santiago</span>
-        <h2>Horarios de la Santa Misa</h2>
+        <h2>Horarios de la Santa Misa</h2><p class="anniversary-home-note" data-anniversary>El 17 y 18 de octubre hay <a href="aniversario-40.html#misas">horarios especiales de Misa por el aniversario</a>.</p>
         <p>La Santa Misa tradicional se celebra todos los días en el Priorato Cristo Rey. Hay confesiones durante todas las Misas.</p>
         <div class="mini-schedule">
           <div><span>Domingo</span><strong>9:00 · 11:00 · 19:00</strong></div>
@@ -223,10 +226,22 @@
   <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="primera-vez.html">Primera vez en la Misa</a><a href="horarios.html">Horarios</a><a href="calendario.html">Esta semana</a><a href="centros.html">Centros de Misa</a><a href="multimedia.html">Multimedia</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
 
   <script>
+    // The anniversary promotion ends after October 18 in Santiago.
+    const anniversaryDate = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date());
+    const anniversaryPart = (type) => anniversaryDate.find((part) => part.type === type).value;
+    const anniversaryToday = `${anniversaryPart('year')}-${anniversaryPart('month')}-${anniversaryPart('day')}`;
+    if (anniversaryToday > '2026-10-18') {
+      document.querySelectorAll('[data-anniversary]').forEach((element) => element.remove());
+      const originalTitle = document.querySelector('.hero-slide h2');
+      const restoredTitle = document.createElement('h1');
+      restoredTitle.textContent = originalTitle.textContent;
+      originalTitle.replaceWith(restoredTitle);
+    }
     const slides = [...document.querySelectorAll('.hero-slide')];
     const dots = [...document.querySelectorAll('.hero-dot')];
     let activeSlide = 0;
     const showSlide = (index) => { activeSlide = index; slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index)); dots.forEach((dot, i) => { dot.classList.toggle('is-active', i === index); dot.setAttribute('aria-pressed', String(i === index)); }); };
+    showSlide(0);
     dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
     window.setInterval(() => showSlide((activeSlide + 1) % slides.length), 7000);
 

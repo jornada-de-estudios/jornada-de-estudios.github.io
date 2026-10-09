@@ -1,0 +1,47 @@
+
+.anniversary-banner { background:#43151d; color:#fff5dd; }
+.anniversary-banner .container { display:grid; grid-template-columns:1.4fr 1fr; align-items:center; gap:3rem; padding-top:3rem; padding-bottom:3rem; }
+.anniversary-banner .section-kicker { color:#e7c98d; }
+.anniversary-banner h1,.anniversary-banner h2 { font:400 clamp(2.8rem,5vw,4.9rem)/1.04 var(--serif); margin:1rem 0; }
+.anniversary-banner p { max-width:34rem; color:#f0dfcb; }
+.anniversary-art { width:100%; max-width:360px; justify-self:center; }
+.anniversary-actions { display:flex; flex-wrap:wrap; gap:1rem; align-items:center; margin-top:1.5rem; }
+.anniversary-button { display:inline-block; background:#e8c98e; color:#43151d; padding:.8rem 1.25rem; font-size:.92rem; }
+.anniversary-text-link { border-bottom:1px solid #e8c98e; font-size:.92rem; }
+.hero-slide.anniversary-slide { padding:0; align-items:center; background:#43151d; }
+.anniversary-slide .container { width:min(1180px,calc(100% - 3rem)); }
+.anniversary-slide h1 { font-size:clamp(2.6rem,4.5vw,4.4rem); }
+.anniversary-page { background:#faf7f0; }
+.anniversary-masses { padding:2.5rem 0; border-bottom:1px solid #d7cbb7; }
+.anniversary-masses h2,.anniversary-program h2,.anniversary-visit h2 { font:400 clamp(2rem,3vw,3rem)/1.1 var(--serif); margin:.7rem 0 1rem; }
+.anniversary-schedule { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
+.anniversary-schedule article { background:#fff; padding:1.5rem 2rem; border-top:3px solid #a17b38; }
+.anniversary-schedule h3 { font:400 1.65rem/1.2 var(--serif); margin:0 0 1rem; }
+.anniversary-schedule ul { list-style:none; padding:0; margin:0; }
+.anniversary-schedule li { padding:.6rem 0; border-bottom:1px solid #e8e1d4; }
+.anniversary-schedule time { display:inline-block; min-width:4rem; font-weight:500; color:#6c202c; }
+.anniversary-note { color:#686052; font-size:.9rem; line-height:1.5; }
+.anniversary-program { padding:3.5rem 0; }
+.anniversary-day { display:grid; grid-template-columns:180px 1fr; border-top:1px solid #d7cbb7; padding:1.5rem 0; gap:2rem; }
+.anniversary-day > h3 { font:400 1.7rem/1.2 var(--serif); margin:.25rem 0; color:#6c202c; }
+.anniversary-event { display:grid; grid-template-columns:80px 1fr; gap:1.25rem; padding:0 0 1.75rem; }
+.anniversary-event:last-child { padding-bottom:0; }
+.anniversary-event > time { color:#8b682e; font-size:1.15rem; padding-top:.2rem; }
+.anniversary-event h4 { font:400 1.75rem/1.15 var(--serif); margin:0 0 .5rem; }
+.anniversary-event p { margin:.4rem 0; font-size:.97rem; color:#645b50; }
+.anniversary-label { display:inline-block; padding:.2rem .65rem; margin:.5rem 0; background:#eee5d2; color:#5a431e; font-size:.8rem; }
+.anniversary-visit { background:#eee6d6; padding:2.5rem 0; }
+.anniversary-visit .container { display:flex; justify-content:space-between; align-items:center; gap:2rem; }
+.anniversary-visit p { margin:.5rem 0; }
+.anniversary-home-note { margin-top:1rem; padding:.85rem 1rem; border-left:3px solid #a17b38; background:#faf3e3; font-size:.88rem; line-height:1.5; }
+.anniversary-home-note a { text-decoration:underline; }
+@media(max-width:700px) {
+ .anniversary-banner .container { grid-template-columns:1fr; gap:1rem; padding-top:2rem; padding-bottom:2.5rem; }
+ .anniversary-art { max-width:190px; grid-row:1; }
+ .anniversary-slide .anniversary-art { display:none; }
+ .anniversary-schedule { grid-template-columns:1fr; }
+ .anniversary-day { grid-template-columns:1fr; gap:1.25rem; }
+ .anniversary-event { grid-template-columns:60px 1fr; gap:.75rem; }
+ .anniversary-visit .container { display:block; }
+ .anniversary-visit .anniversary-button { margin-top:1rem; }
+}
