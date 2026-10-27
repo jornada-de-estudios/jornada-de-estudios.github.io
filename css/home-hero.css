@@ -9,27 +9,23 @@
 .rorate-slide h1 em { font-weight:400; }
 .rorate-slide .hero-caption p { color:#f7ebd9; }
 .rorate-slide .hero-caption a { display:inline-block; background:#d6b16a; color:#29170f; border:0; padding:.75rem 1.15rem; }
-.hero-controls { position:static; transform:none; display:flex; align-items:center; justify-content:center; gap:1rem; padding:.8rem 1rem; background:#211512; }
-.hero-dots { display:flex; align-items:center; gap:.1rem; }
-.hero-dots .hero-dot { width:44px; height:44px; border:0; border-radius:0; background:transparent; display:grid; place-items:center; }
-.hero-dot::before { content:''; width:9px; height:9px; border:1px solid #e8d8b8; border-radius:50%; }
-.hero-dots .hero-dot.is-active::before { background:#d6b16a; border-color:#d6b16a; }
-.hero-arrow,.hero-pause { min-width:44px; min-height:44px; color:#f9efde; background:transparent; border:1px solid #9e8c79; font:inherit; cursor:pointer; }
-.hero-arrow { border-radius:50%; font-size:1.3rem; }
-.hero-pause { padding:.5rem 1rem; font-size:.9rem; }
-.hero-arrow:hover,.hero-pause:hover { background:#4a3527; }
-.hero-status { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); }
-.hero-swipe-hint { display:none; }
 .feature-card.feature-card-light { background:#f2e9dd; color:var(--ink); }
 .feature-card-light p { color:#62594e; }
 .feature-card-light .section-kicker { color:#875437; }
 .feature-card-light .line-link { color:var(--red); }
-@media(max-width:700px) {
+@media(max-width:900px) {
  .hero .hero-slide { min-height:37rem; padding:0; background-image:var(--hero-image-mobile); background-position:center top; background-size:auto 18rem; background-repeat:no-repeat; background-color:#211512; align-items:stretch; }
  .hero .hero-caption { margin-top:17rem; padding:1.6rem 1.5rem 2rem; width:100%; background:#211512; }
  .rorate-slide .hero-caption h1 { font-size:2.7rem; }
- .hero-controls { gap:.35rem; flex-wrap:wrap; }
- .hero-pause { padding:.5rem .7rem; }
- .hero-swipe-hint { display:block; margin:0; padding:0 0 .8rem; text-align:center; font-size:.75rem; color:#decbb4; }
 }
 @media(prefers-reduced-motion:reduce) { .hero-slides { scroll-behavior:auto; } }
+
+/* Crop the supplied flyer to the original photograph, excluding all lettering. */
+.hero .rorate-slide { background-position:center 48%; }
+.hero-controls { position:absolute; left:50%; bottom:.8rem; transform:translateX(-50%); padding:0; background:none; }
+.hero-dots { display:flex; gap:.65rem; }
+@media(max-width:900px) {
+ .hero .rorate-slide { background-size:100% auto; background-position:center -40vw; }
+ .hero .rorate-slide .hero-caption { margin-top:70vw; }
+ .hero .hero-caption { padding-bottom:3rem; }
+}
