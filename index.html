@@ -82,6 +82,7 @@
 }
 </script>
   <link rel="stylesheet" href="css/anniversary.css?v=7">
+  <link rel="stylesheet" href="css/home-hero.css?v=1">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -140,16 +141,14 @@
 
   <main id="contenido">
     <div class="weekly-shortcut"><div class="container"><strong>Esta semana en el Priorato</strong><a href="calendario.html">Ver calendario de Misas y actividades <span aria-hidden="true">›</span></a></div></div>
-    <section class="hero" aria-label="Destacados del Priorato">
-      <div class="hero-slides" id="hero-slides">
-        <article class="hero-slide is-active" style="--hero-image: url('/img/priorato/misa-altar-1600.webp'); --hero-image-mobile: url('/img/priorato/misa-altar-800.webp')">
-          <div class="hero-caption"><span class="caption-kicker">Priorato Cristo Rey · Santiago de Chile</span><h1>La Santa Misa tradicional</h1><p>Horarios, dirección y avisos del Priorato.</p><a href="#misa">Ver horarios <span aria-hidden="true">›</span></a></div>
+    <section class="hero" aria-roledescription="carrusel" aria-label="Destacados del Priorato">
+      <div class="hero-slides" id="hero-slides" tabindex="0" aria-label="Destacados; deslice o use las flechas para explorar">
+        <article class="hero-slide rorate-slide is-active" style="--hero-image: url('/img/priorato/rorate-caeli.webp'); --hero-image-mobile: url('/img/priorato/rorate-caeli.webp')">
+          <div class="hero-caption"><span class="caption-kicker"><time datetime="2026-12-05T05:00:00-03:00">Sábado 5 de diciembre · 05:00 h</time></span><h1>Misa cantada<br><em>Rorate Caeli</em></h1><p>Misa de la Santísima Virgen María en Adviento.</p><p class="rorate-location">Priorato Cristo Rey · Las Condes</p><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">→</span></a></div>
         </article>
+
         <article class="hero-slide" style="--hero-image: url('/img/priorato/interior-iglesia-1600.webp'); --hero-image-mobile: url('/img/priorato/interior-iglesia-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Misa tridentina en Chile</span><h2>Primera vez en la Misa tradicional</h2><p>No necesitas saber latín ni conocer las ceremonias.</p><a href="primera-vez.html">Información para tu primera visita <span aria-hidden="true">›</span></a></div>
-        </article>
-        <article class="hero-slide bulletin-anniversary-slide">
-          <div class="hero-caption"><span class="caption-kicker">Estrella Solitaria · Octubre 2026</span><h2>40 años del Priorato</h2><p>Dos artículos del boletín mensual: memoria, fe y vida del Priorato de Santiago.</p><a href="/boletin/202610/">Ver esta edición <span aria-hidden="true">›</span></a></div>
         </article>
         <article class="hero-slide" style="--hero-image: url('/img/priorato/calendario-1600.webp'); --hero-image-mobile: url('/img/priorato/calendario-800.webp')">
           <div class="hero-caption"><span class="caption-kicker">Agenda del Priorato</span><h2>Calendario semanal</h2><p>Horarios de Misa, actividades y visitas a los centros.</p><a href="calendario.html">Ver el calendario de esta semana <span aria-hidden="true">›</span></a></div>
@@ -158,13 +157,14 @@
           <div class="hero-caption"><span class="caption-kicker">Próximamente</span><h2>Salus animarum</h2><p>Documental sobre las consagraciones episcopales</p><a href="https://m.youtube.com/watch?v=HjYc07qGfnI" target="_blank" rel="noopener">Ver tráiler <span aria-hidden="true">↗</span></a></div>
         </article>
       </div>
-      <div class="hero-controls" aria-label="Seleccionar destacado">
-        <button class="hero-dot is-active" type="button" aria-label="Mostrar la Santa Misa tradicional" aria-pressed="true"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar información para la primera visita" aria-pressed="false"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar Estrella Solitaria: 40 años" aria-pressed="false"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar calendario semanal" aria-pressed="false"></button>
-        <button class="hero-dot" type="button" aria-label="Mostrar video destacado" aria-pressed="false"></button>
+      <div class="hero-controls" aria-label="Controles de destacados">
+        <button class="hero-arrow" type="button" data-hero-prev aria-label="Destacado anterior" aria-controls="hero-slides">←</button>
+        <div class="hero-dots"><button class="hero-dot is-active" type="button" aria-label="Mostrar Misa Rorate Caeli" aria-pressed="true" aria-controls="hero-slides"></button><button class="hero-dot" type="button" aria-label="Mostrar información para la primera visita" aria-pressed="false" aria-controls="hero-slides"></button><button class="hero-dot" type="button" aria-label="Mostrar calendario semanal" aria-pressed="false" aria-controls="hero-slides"></button><button class="hero-dot" type="button" aria-label="Mostrar video destacado" aria-pressed="false" aria-controls="hero-slides"></button></div>
+        <button class="hero-arrow" type="button" data-hero-next aria-label="Siguiente destacado" aria-controls="hero-slides">→</button>
+        <button class="hero-pause" type="button" aria-controls="hero-slides"><span aria-hidden="true">Ⅱ</span> Pausar</button>
+        <span class="hero-status" role="status" aria-live="polite"></span>
       </div>
+      <p class="hero-swipe-hint">Desliza para explorar</p>
     </section>
 
     <section class="intro-grid container" aria-label="Misas y visitas">
@@ -192,7 +192,7 @@
       <div class="container">
         <div class="section-title"><div><span class="section-kicker">Información del Priorato</span><h2 id="semana-title">Otros centros y vida del Priorato</h2></div><span class="title-rule" aria-hidden="true"></span></div>
         <div class="feature-grid">
-          <article class="feature-card feature-card-dark"><span class="section-kicker">Centros de Misa</span><h3>Misas en otras ciudades</h3><p>Encuentre los centros de Misa fuera de Santiago y consulte sus direcciones y horarios.</p><a class="line-link" href="centros.html">Ver centros y horarios <span aria-hidden="true">›</span></a></article>
+          <article class="feature-card feature-card-light"><span class="section-kicker">Centros de Misa</span><h3>Misas en otras ciudades</h3><p>Encuentre los centros de Misa fuera de Santiago y consulte sus direcciones y horarios.</p><a class="line-link" href="centros.html">Ver centros y horarios <span aria-hidden="true">›</span></a></article>
           <article class="feature-card"><span class="section-kicker">Primer viernes y sábado</span><h3>Exposición del Santísimo Sacramento</h3><p><strong>Primer viernes:</strong> Misa cantada a las 19:00, seguida de exposición hasta medianoche.</p><p><strong>Primer sábado:</strong> exposición a las 11:00 y Misa cantada a las 12:00.</p><a class="line-link" href="#misa">Consultar horarios <span aria-hidden="true">›</span></a></article>
           <article class="feature-card"><span class="section-kicker">Canal del Priorato</span><h3>Transmisiones y conferencias</h3><p>Transmisiones de la Santa Misa, clases y conferencias del Priorato.</p><a class="line-link" href="https://www.youtube.com/@fsspxchileprioratocristorey/streams" target="_blank" rel="noopener">Ver en YouTube <span aria-hidden="true">›</span></a></article>
         </div>
@@ -228,15 +228,8 @@
 
   <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="primera-vez.html">Primera vez en la Misa</a><a href="horarios.html">Horarios</a><a href="calendario.html">Esta semana</a><a href="centros.html">Centros de Misa</a><a href="multimedia.html">Multimedia</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
 
+  <script src="js/hero-carousel.js?v=1" defer></script>
   <script>
-    const slides = [...document.querySelectorAll('.hero-slide')];
-    const dots = [...document.querySelectorAll('.hero-dot')];
-    let activeSlide = 0;
-    const showSlide = (index) => { activeSlide = index; slides.forEach((slide, i) => slide.classList.toggle('is-active', i === index)); dots.forEach((dot, i) => { dot.classList.toggle('is-active', i === index); dot.setAttribute('aria-pressed', String(i === index)); }); };
-    showSlide(0);
-    dots.forEach((dot, index) => dot.addEventListener('click', () => showSlide(index)));
-    window.setInterval(() => showSlide((activeSlide + 1) % slides.length), 7000);
-
     const pullouts = document.querySelector('#site-pullouts');
     const menuButton = document.querySelector('.menu-button');
     const panelToggles = [...document.querySelectorAll('[data-panel-toggle]')];
