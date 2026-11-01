@@ -5,8 +5,8 @@
 .hero .rorate-slide { background-image:linear-gradient(90deg,rgba(20,9,6,.9),rgba(20,9,6,.65) 40%,transparent 75%),var(--hero-image); }
 .rorate-slide .hero-caption { background:none; padding-left:0; width:min(37rem,60%); }
 .rorate-slide .caption-kicker { color:#e9c77b; }
-.rorate-slide .hero-caption h1 { font-size:clamp(2.7rem,4.8vw,4.6rem); }
-.rorate-slide h1 em { font-weight:400; }
+.rorate-slide .hero-caption h2 { font-size:clamp(2.7rem,4.8vw,4.6rem); }
+.rorate-slide h2 em { font-weight:400; }
 .rorate-slide .hero-caption p { color:#f7ebd9; }
 .rorate-slide .hero-caption a { display:inline-block; background:#d6b16a; color:#29170f; border:0; padding:.75rem 1.15rem; }
 .feature-card.feature-card-light { background:#f2e9dd; color:var(--ink); }
@@ -16,7 +16,7 @@
 @media(max-width:900px) {
  .hero .hero-slide { min-height:37rem; padding:0; background-image:var(--hero-image-mobile); background-position:center top; background-size:auto 18rem; background-repeat:no-repeat; background-color:#211512; align-items:stretch; }
  .hero .hero-caption { margin-top:17rem; padding:1.6rem 1.5rem 2rem; width:100%; background:#211512; }
- .rorate-slide .hero-caption h1 { font-size:2.7rem; }
+ .rorate-slide .hero-caption h2 { font-size:2.7rem; }
 }
 @media(prefers-reduced-motion:reduce) { .hero-slides { scroll-behavior:auto; } }
 
@@ -28,4 +28,13 @@
  .hero .rorate-slide { background-size:100% auto; background-position:center -40vw; }
  .hero .rorate-slide .hero-caption { margin-top:70vw; }
  .hero .hero-caption { padding-bottom:3rem; }
+}
+
+.hero .bulletin-slide { background:radial-gradient(ellipse at top right,#73442c,transparent 65%),#291b17; align-items:center; }
+.hero .bulletin-slide .hero-caption { width:min(48rem,100%); background:none; padding-left:0; }
+.bulletin-slide .caption-kicker { color:#e9c77b; }
+.bulletin-hero-links { padding-left:1.2rem; margin:0 0 1.5rem; }
+.bulletin-hero-links li { margin-bottom:.8rem; line-height:1.6; }
+@media(max-width:900px) {
+ .hero .bulletin-slide .hero-caption { margin-top:0; padding:2.5rem 1.5rem 3rem; }
 }
