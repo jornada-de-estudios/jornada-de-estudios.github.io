@@ -1,0 +1,25 @@
+/* Sermon recording and reading layouts, using the parish design system. */
+.sermon-actions { display:flex; flex-wrap:wrap; gap:1rem 1.5rem; margin-top:1.5rem; }
+.sermon-actions .line-link { color:var(--red); }
+.sermon-recording { padding-top:3rem; padding-bottom:1rem; }
+.sermon-recording h2 { margin:.6rem 0 1.25rem; font:400 2.2rem/1.15 var(--serif); }
+.sermon-player { width:100%; aspect-ratio:16/9; background:#101010; }
+.sermon-player iframe { display:block; width:100%; height:100%; border:0; }
+.sermon-recording p { font-size:.95rem; }
+.sermon-transcript { border-top:1px solid var(--line); }
+.sermon-transcript h2 { margin-top:.6rem; }
+.sermon-text { font:400 1.15rem/1.85 Georgia, "Times New Roman", serif; overflow-wrap:break-word; }
+.sermon-text p { margin:0 0 1.3em; }
+.sermon-back { margin-top:2rem; }
+.sermon-card { display:block; }
+.sermon-card h3 { max-width:none; }
+.sermon-card-image { display:block; width:100%; height:auto; margin-bottom:1.5rem; }
+@media (max-width:600px) { .sermon-recording { padding-top:2rem; } .sermon-text { font-size:1.08rem; } }
+@media print {
+  .site-header, .site-footer, .breadcrumbs, .skip-link, .sermon-actions, .sermon-recording, .sermon-back { display:none; }
+  .container { width:100%; max-width:none; }
+  .page-intro, .article-body { padding:0; border:0; }
+  .sermon-transcript { border:0; }
+  .sermon-text { font-size:11pt; line-height:1.5; }
+  .article-source { break-inside:avoid; }
+}
