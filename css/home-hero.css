@@ -41,7 +41,7 @@
 
 .hero .letter-slide { background:#f5efe4; color:var(--ink); align-items:center; overflow:hidden; }
 .letter-hero-painting { position:absolute; top:0; right:0; width:62%; height:100%; object-fit:cover; object-position:center 25%; }
-.hero .letter-slide::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg,#f5efe4 0%,#f5efe4 35%,rgba(245,239,228,.95) 43%,rgba(245,239,228,.55) 53%,transparent 68%); }
+.hero .letter-slide::before { display:none; }
 .hero .letter-slide .hero-caption { position:relative; z-index:1; width:min(36rem,50%); background:none; padding-left:0; }
 .letter-slide .caption-kicker { color:#8b4933; }
 .letter-slide .hero-caption p { color:#4e4540; }
@@ -49,6 +49,11 @@
 .letter-hero-actions { display:flex; flex-wrap:wrap; gap:1rem 2rem; }
 .hero:has(.letter-slide.is-active) .hero-dot { border-color:var(--red); }
 .hero:has(.letter-slide.is-active) .hero-dot.is-active { background:var(--red); }
+@media(min-width:901px) {
+ .hero .letter-slide { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); padding:0; }
+ .letter-hero-painting { width:50%; }
+ .hero .letter-slide .hero-caption { grid-column:1; width:100%; min-width:0; padding:3.5rem clamp(1.5rem,3vw,4rem) 4rem max(1.5rem,calc((100vw - 1180px)/2)); }
+}
 @media(max-width:900px) {
  .hero .letter-slide { background:#f5efe4; }
  .letter-hero-painting { width:100%; height:18rem; object-position:center 28%; }
