@@ -1,0 +1,12 @@
+.devotion-intro-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,20rem); gap:3rem; align-items:center; }
+.devotion-intro-grid img { display:block; width:100%; height:auto; max-height:28rem; object-fit:contain; }
+.devotion-intro-grid h1 { font-size:clamp(2.3rem,4vw,3.6rem); }
+.devotion-links { display:flex; flex-wrap:wrap; gap:1rem 1.75rem; margin-top:1.5rem; }
+.devotion-body { max-width:900px; padding-top:1rem; padding-bottom:4rem; }
+.devotion-body section { padding:2rem 0; border-bottom:1px solid var(--line); scroll-margin-top:1rem; }
+.devotion-body h2 { font:400 2rem/1.2 var(--serif); margin:0 0 1.25rem; }
+.devotion-body li { margin-bottom:.65rem; }
+.devotion-reading { padding-left:1.25rem; }
+.devotion-reading a { color:var(--red); text-decoration:underline; text-underline-offset:.2em; }
+.devotion-other { margin-top:2rem; }
+@media(max-width:700px) { .devotion-intro-grid { grid-template-columns:1fr; gap:2rem; } .devotion-intro-grid img { grid-row:1; max-height:23rem; } }
