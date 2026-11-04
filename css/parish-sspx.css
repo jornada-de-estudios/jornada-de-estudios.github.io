@@ -151,6 +151,8 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .calendar-events { display:flex; flex-direction:column; gap:.42rem; margin:0; padding:0; list-style:none; color:var(--muted); font-size:.92rem; line-height:1.35; }
 .calendar-events strong { color:var(--ink); font-weight:500; }
 .calendar-events .event-emphasis { color:var(--ink); }
+.calendar-events a { color:var(--red); text-decoration:underline; text-decoration-thickness:1px; text-underline-offset:.2em; }
+.calendar-events a:hover, .calendar-events a:focus-visible { color:var(--blue); text-decoration-thickness:2px; }
 .calendar-empty { color:#aaa; }
 .calendar-centers { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:1.5rem; }
 .calendar-centers > div { display:flex; flex-direction:column; gap:.45rem; padding:1.35rem 1.5rem; background:var(--wash); border-top:3px solid var(--red); }
