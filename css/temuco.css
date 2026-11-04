@@ -1,8 +1,5 @@
-.temuco-recent { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:3rem; align-items:center; max-width:900px; margin:auto; }
-.temuco-recent figure,.temuco-archive figure { margin:0; }
-.temuco-recent img { display:block; width:auto; max-width:100%; max-height:42rem; margin:auto; }
-.temuco-recent h3 { font:400 2rem/1.2 var(--serif); }
-.temuco-archive { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2rem; align-items:start; margin-top:2rem; }
-.temuco-archive img { display:block; width:100%; height:auto; }
-.temuco-recent figcaption,.temuco-archive figcaption { color:var(--muted); font-size:.85rem; margin-top:.75rem; }
-@media(max-width:650px) { .temuco-recent,.temuco-archive { grid-template-columns:1fr; gap:2rem; } .temuco-recent img { max-height:35rem; } }
+.temuco-gallery { display:grid; grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr); gap:1.5rem; align-items:start; padding-block:1.5rem 3rem; }
+.temuco-gallery figure { margin:0; }
+.temuco-gallery figure:first-child { grid-row:span 2; }
+.temuco-gallery img { display:block; width:100%; height:auto; }
+@media(max-width:650px) { .temuco-gallery { grid-template-columns:1fr; } .temuco-gallery figure:first-child { grid-row:auto; max-width:24rem; margin-inline:auto; } }
