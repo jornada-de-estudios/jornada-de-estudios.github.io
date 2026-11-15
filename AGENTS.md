@@ -31,3 +31,8 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 - Adding or publishing a sermon in the Sermones section must leave the homepage unchanged unless the user explicitly requests a homepage update.
 - Do not automatically add sermon highlights, carousel slides, or links to individual sermons on the homepage.
 - Preserve the homepage's general link to the sermon archive.
+
+## Authorization for live editorial text
+
+- Never add editorial or process commentary to the live site without the user's explicit authorization. This includes notes about transcription cleanup, removed timestamps or fillers, unclear passages, uncertainty labels, and similar explanations.
+- Discuss editorial decisions, limitations, and review concerns in chat instead of publishing them as site content.
