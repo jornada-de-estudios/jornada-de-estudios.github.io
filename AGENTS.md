@@ -25,3 +25,9 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 - Keep the homepage's existing devotion paragraphs, with a “Más información” link in each paragraph.
 - Run `python3 scripts/check-calendar-devotions.py` after every calendar update and resolve missing links before committing.
 - Keep changing dates and exceptional schedules in the weekly calendar; the landing pages explain the usual practice. January and February usually end First Friday adoration at midnight.
+
+## Sermon publishing scope
+
+- Adding or publishing a sermon in the Sermones section must leave the homepage unchanged unless the user explicitly requests a homepage update.
+- Do not automatically add sermon highlights, carousel slides, or links to individual sermons on the homepage.
+- Preserve the homepage's general link to the sermon archive.
