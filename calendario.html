@@ -90,7 +90,6 @@
     <section class="section ordo-section" id="calendario-liturgico" aria-labelledby="ordo-title"><div class="container">
       <div class="section-title"><div><span class="section-kicker">La liturgia de cada día · Chile</span><h2 id="ordo-title">Calendario litúrgico</h2></div><a class="line-link" href="https://ordo.fsspx.org/es" target="_blank" rel="noopener">Abrir el Ordo <span aria-hidden="true">↗</span></a></div>
       <p class="ordo-intro">Consulte las fiestas, los santos y los tiempos litúrgicos según el Misal Romano de 1962.</p>
-      <p class="ordo-status" id="ordo-status" role="status">Cargando el calendario litúrgico…</p>
       <div id="ordo" data-ordo-theme="light"></div>
       <noscript><p>Para ver el calendario, <a href="https://ordo.fsspx.org/es">consulte el Ordo FSSPX</a>.</p></noscript>
     </div></section>
@@ -102,6 +101,6 @@
     panelToggles.forEach((button) => button.addEventListener('click', () => { const targetId = button.dataset.panelToggle; const isOpen = button.getAttribute('aria-expanded') === 'true'; if (isOpen) { pullouts.hidden = true; panels.forEach((panel) => { panel.hidden = true; }); button.setAttribute('aria-expanded', 'false'); } else setPanelState(targetId); }));
     menuButton.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); pullouts.hidden = open; panels.forEach((panel) => { panel.hidden = open ? true : false; }); panelToggles.forEach((button) => button.setAttribute('aria-expanded', 'false')); });
   </script>
-  <script src="js/ordo-embed.js" defer></script>
+  <script src="js/ordo-embed.js?v=2" defer></script>
 </body>
 </html>

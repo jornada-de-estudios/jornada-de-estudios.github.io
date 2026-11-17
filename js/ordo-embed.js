@@ -1,7 +1,6 @@
 (() => {
   const host = document.getElementById('ordo');
-  const status = document.getElementById('ordo-status');
-  if (!host || !status) return;
+  if (!host) return;
 
   // Try Spanish first so upstream support takes effect automatically.
   const load = (lang) => new Promise((resolve, reject) => {
@@ -16,13 +15,11 @@
   const start = async () => {
     try {
       await load('es');
-      status.hidden = true;
     } catch {
       try {
         await load('la');
-        status.textContent = 'El Ordo integrado está disponible por ahora en latín. Puede consultar el sitio del Ordo en español mediante el enlace superior.';
       } catch {
-        status.textContent = 'No se pudo cargar el calendario. Consulte el Ordo mediante el enlace superior.';
+        console.error('[Ordo] Calendar could not be loaded.');
       }
     }
   };
