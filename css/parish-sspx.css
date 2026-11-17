@@ -322,3 +322,10 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .calendar-button { display:inline-block; margin-top:1rem; padding:.75rem 1rem; background:var(--red); color:#fff; font-size:.9rem; }
 .calendar-button:hover { background:var(--blue); }
 .intro-card p { margin:0 0 1.5rem; color:rgba(255,255,255,.8); }
+
+/* Live liturgical calendar, alongside the parish's weekly schedule. */
+.ordo-section { border-top:1px solid var(--line); background:#fbf9f5; }
+.ordo-intro { max-width:46rem; margin:0 auto 1.5rem; color:var(--muted); }
+.ordo-status { max-width:46rem; margin:0 auto 1.25rem; font-size:14px; line-height:1.6; }
+.ordo-status[hidden] { display:none; }
+#ordo { min-width:0; }

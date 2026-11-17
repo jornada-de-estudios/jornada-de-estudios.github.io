@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/parish-sspx.css?v=12">
+  <link rel="stylesheet" href="css/parish-sspx.css?v=13">
 
 <link rel="canonical" href="https://cristiandad.cl/calendario.html">
 <meta property="og:title" content="Calendario semanal · Priorato Cristo Rey">
@@ -87,6 +87,13 @@
       <div class="calendar-centers"><div><span class="section-kicker">Centros de Misa · Chile</span><strong><a href="centro-santiago.html">Santiago · horarios semanales</a></strong><strong><a href="centro-vina-del-mar.html">Viña del Mar · horarios semanales</a></strong><strong><a href="centro-la-serena.html">La Serena · 13 al 16 de noviembre</a></strong><strong><a href="centro-temuco.html">Temuco · consultar fechas</a></strong></div><div><span class="section-kicker">Centros de Misa · Extranjero</span><strong>Guayaquil · 26 al 29 de noviembre</strong><strong>Quito · 29 de noviembre al 2 de diciembre</strong><strong>Lima · consultar fechas</strong></div></div>
       <p class="calendar-source-note">Este calendario se publica como orientación semanal. Conviene confirmar cualquier cambio en el Priorato.</p>
     </div></section>
+    <section class="section ordo-section" id="calendario-liturgico" aria-labelledby="ordo-title"><div class="container">
+      <div class="section-title"><div><span class="section-kicker">La liturgia de cada día · Chile</span><h2 id="ordo-title">Calendario litúrgico</h2></div><a class="line-link" href="https://ordo.fsspx.org/es" target="_blank" rel="noopener">Abrir el Ordo <span aria-hidden="true">↗</span></a></div>
+      <p class="ordo-intro">Consulte las fiestas, los santos y los tiempos litúrgicos según el Misal Romano de 1962.</p>
+      <p class="ordo-status" id="ordo-status" role="status">Cargando el calendario litúrgico…</p>
+      <div id="ordo" data-ordo-theme="light"></div>
+      <noscript><p>Para ver el calendario, <a href="https://ordo.fsspx.org/es">consulte el Ordo FSSPX</a>.</p></noscript>
+    </div></section>
   </main>
   <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="/"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="horarios.html">Horarios</a><a href="calendario.html" aria-current="page">Esta semana</a><a href="media.html">Media</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
   <script>
@@ -95,5 +102,6 @@
     panelToggles.forEach((button) => button.addEventListener('click', () => { const targetId = button.dataset.panelToggle; const isOpen = button.getAttribute('aria-expanded') === 'true'; if (isOpen) { pullouts.hidden = true; panels.forEach((panel) => { panel.hidden = true; }); button.setAttribute('aria-expanded', 'false'); } else setPanelState(targetId); }));
     menuButton.addEventListener('click', () => { const open = menuButton.getAttribute('aria-expanded') === 'true'; menuButton.setAttribute('aria-expanded', String(!open)); pullouts.hidden = open; panels.forEach((panel) => { panel.hidden = open ? true : false; }); panelToggles.forEach((button) => button.setAttribute('aria-expanded', 'false')); });
   </script>
+  <script src="js/ordo-embed.js" defer></script>
 </body>
 </html>
