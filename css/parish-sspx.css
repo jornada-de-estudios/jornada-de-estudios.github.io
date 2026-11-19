@@ -275,7 +275,6 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
 .mobile-quick-nav { display:none; }
 .weekly-shortcut { background:var(--blue); color:#fff; }
 .weekly-shortcut .container { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding-top:1rem; padding-bottom:1rem; }
-.weekly-shortcut strong { font-weight:500; }
 .weekly-shortcut a { text-decoration:underline; text-underline-offset:4px; }
 .article-width { max-width:760px; }
 .article-body { padding-top:2rem; padding-bottom:4rem; line-height:1.8; }
@@ -294,7 +293,8 @@ a:focus-visible, button:focus-visible { outline:3px solid var(--orange); outline
   .mobile-quick-nav a { display:flex; align-items:center; justify-content:center; min-height:48px; padding:.6rem .75rem; font-size:.78rem; line-height:1.35; }
   .mobile-quick-nav a:first-child { flex:1; gap:.6rem; font-weight:500; }
   .mobile-quick-nav a:last-child { border-left:1px solid #ffffff40; }
-  .mobile-quick-nav a[aria-current] { text-decoration:underline; text-underline-offset:4px; }
+  .mobile-quick-nav a[href="/calendario.html"] { text-decoration:underline; text-underline-offset:4px; }
+  .mobile-quick-nav a[aria-current], .parish-menu a[aria-current] { font-weight:700; }
   .network-panel { max-height:calc(100dvh - 125px); overflow-y:auto; }
   .weekly-shortcut { display:none; }
   .hero-slide { background-image:linear-gradient(90deg, rgba(0,0,0,.14), rgba(0,0,0,.05)), var(--hero-image-mobile); }

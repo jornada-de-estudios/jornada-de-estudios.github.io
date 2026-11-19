@@ -26,7 +26,7 @@
     const open = menuButton.getAttribute('aria-expanded') === 'true';
     menuButton.setAttribute('aria-expanded', String(!open));
     pullouts.hidden = open;
-    panels.forEach((panel) => { panel.hidden = open ? true : false; });
+    panels.forEach((panel) => { panel.hidden = open || !panel.classList.contains('parish-menu'); });
     panelToggles.forEach((button) => button.setAttribute('aria-expanded', 'false'));
   });
 })();

@@ -49,3 +49,8 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 ## Site labels
 
 - Use familiar Spanish labels such as Recursos, Coro, and Últimas publicaciones. Avoid repeating “del Priorato” in generic headings and navigation. Use the parish name in branding and where it identifies a place, organization, or source.
+
+## Mobile navigation
+
+- Use the same mobile menu and calendar shortcut on every page with the parish header. Copy an existing parish header for new pages, then run `python3 scripts/build-navigation.py`. To change menu links or labels, edit the shared list in that script and regenerate the pages. Use `python3 scripts/build-navigation.py --check` to verify them.
+- Keep the default mobile menu focused on visitor tasks. The About page is available at its URL. Keep the weekly calendar link visibly underlined in the blue shortcut bar on every page.

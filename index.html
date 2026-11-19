@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/parish-sspx.css?v=9">
+  <link rel="stylesheet" href="css/parish-sspx.css?v=14">
 
 <link rel="canonical" href="https://cristiandad.cl/">
 <meta property="og:title" content="Priorato Cristo Rey · Santiago de Chile">
@@ -111,17 +111,7 @@
     </div>
     <div class="network-panel" id="site-pullouts" hidden>
       <div class="container network-grid">
-        <section class="network-menu-section parish-menu" aria-labelledby="parish-menu-title">
-          <span class="menu-heading" id="parish-menu-title">Priorato Cristo Rey</span>
-          <a href="horarios.html">Horarios de Misa</a><a href="primera-vez.html">Primera vez en la Misa</a>
-          <a href="calendario.html">Avisos y actividades</a>
-          <a href="/noticias/">Noticias y artículos</a>
-          <a href="media.html">Media</a>
-          <a href="recursos.html">Recursos</a>
-          <a href="centros.html">Centros de Misa</a>
-          <a href="priorato.html">El Priorato</a>
-          <a href="contacto.html">Contacto</a>
-        </section>
+        <section class="network-menu-section parish-menu" aria-label="Menú principal"><a href="/calendario.html">Calendario de esta semana</a><a href="/horarios.html">Horarios de Misa</a><a href="/centros.html">Centros de Misa</a><a href="/primera-vez.html">Primera vez en la Misa</a><a href="/noticias/">Noticias y artículos</a><a href="/media.html">Media</a><a href="/recursos.html">Recursos</a><a href="/contacto.html">Contacto</a></section>
         <section class="network-menu-section" id="general-houses-menu" hidden aria-labelledby="general-houses-title">
           <span class="menu-heading" id="general-houses-title">Casa general</span>
           <div class="menu-group"><span>Casa General</span><a href="https://fsspx.org/" target="_blank" rel="noopener">fsspx.org</a></div>
@@ -139,10 +129,10 @@
         </section>
       </div>
     </div>
-  <nav class="mobile-quick-nav" aria-label="Accesos rápidos"><a href="calendario.html">Calendario de esta semana <span aria-hidden="true">›</span></a><a href="horarios.html">Horarios de Misa</a></nav></header>
+  <nav class="mobile-quick-nav" aria-label="Accesos rápidos"><a href="/calendario.html">Calendario de esta semana</a><a href="/horarios.html">Horarios de Misa</a></nav></header>
 
   <main id="contenido">
-    <div class="weekly-shortcut"><div class="container"><strong>Esta semana</strong><a href="calendario.html">Ver calendario de Misas y actividades <span aria-hidden="true">›</span></a></div></div>
+    <div class="weekly-shortcut"><div class="container"><a href="/calendario.html">Calendario de esta semana</a></div></div>
     <section class="hero" aria-roledescription="carrusel" aria-label="Destacados del Priorato">
       <div class="hero-slides" id="hero-slides" tabindex="0" aria-label="Destacados; deslice o use las flechas para explorar">
         <article class="hero-slide letter-slide is-active"><img class="letter-hero-painting" src="/img/priorato/tiepolo-inmaculada.webp" alt="" width="960" height="1764" fetchpriority="high"><div class="hero-caption"><span class="caption-kicker">Carta del Superior General · 4 de noviembre de 2026</span><h1>Alégrate, María</h1><p><em>«Alégrate, María, porque tú sola has aplastado todas las herejías que han aparecido en el mundo».</em></p><div class="letter-hero-actions"><a href="/recursos/carta-superior-general-2026-11-04.html">Leer la carta <span aria-hidden="true">›</span></a><a href="/pdf/lab_95_alegrate_maria_es.pdf" download>Descargar PDF <span aria-hidden="true">↓</span></a></div></div></article>
@@ -247,30 +237,6 @@
   <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="primera-vez.html">Primera vez en la Misa</a><a href="horarios.html">Horarios</a><a href="calendario.html">Esta semana</a><a href="/noticias/">Noticias y artículos</a><a href="centros.html">Centros de Misa</a><a href="media.html">Media</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
 
   <script src="js/hero-carousel.js?v=3" defer></script>
-  <script>
-    const pullouts = document.querySelector('#site-pullouts');
-    const menuButton = document.querySelector('.menu-button');
-    const panelToggles = [...document.querySelectorAll('[data-panel-toggle]')];
-    const panels = [...document.querySelectorAll('.network-menu-section')];
-    const setPanelState = (targetId) => {
-      pullouts.hidden = false;
-      panels.forEach((panel) => { panel.hidden = targetId ? panel.id !== targetId : false; });
-      panelToggles.forEach((button) => button.setAttribute('aria-expanded', String(button.dataset.panelToggle === targetId)));
-      menuButton.setAttribute('aria-expanded', 'false');
-    };
-    panelToggles.forEach((button) => button.addEventListener('click', () => {
-      const targetId = button.dataset.panelToggle;
-      const isOpen = button.getAttribute('aria-expanded') === 'true';
-      if (isOpen) { pullouts.hidden = true; panels.forEach((panel) => { panel.hidden = true; }); button.setAttribute('aria-expanded', 'false'); }
-      else setPanelState(targetId);
-    }));
-    menuButton.addEventListener('click', () => {
-      const open = menuButton.getAttribute('aria-expanded') === 'true';
-      menuButton.setAttribute('aria-expanded', String(!open));
-      pullouts.hidden = open;
-      panels.forEach((panel) => { panel.hidden = open ? true : false; });
-      panelToggles.forEach((button) => button.setAttribute('aria-expanded', 'false'));
-    });
-  </script>
+  <script src="/js/parish-site.js?v=2" defer></script>
 </body>
 </html>
