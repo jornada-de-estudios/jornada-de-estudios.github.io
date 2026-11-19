@@ -28,8 +28,7 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 
 ## Sermon publishing scope
 
-- Adding or publishing a sermon in the Sermones section must leave the homepage unchanged unless the user explicitly requests a homepage update.
-- Do not automatically add sermon highlights, carousel slides, or links to individual sermons on the homepage.
+- Let newly published sermons appear in the homepage’s generated Últimas publicaciones list by publication date. Get explicit user direction before featuring an individual sermon elsewhere on the homepage, including in the hero.
 - Preserve the homepage's general link to the sermon archive.
 
 ## Authorization for live editorial text
@@ -43,6 +42,10 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 - Use `articulos` for long-form reading, sermons, and devotional guides, `avisos` for news with lasting interest such as a documentary release, and `eventos` for celebrations or activities with a dedicated public program. Put short notices about confession arrangements, cancellations, ordinary service times, and weekly schedule exceptions in `calendario.html`. Leave those out of the publication index.
 - Each entry needs `title`, `type`, `published` (YYYY-MM-DD), and `url` (a root-relative canonical page). Add a short Spanish `summary` when helpful. Use optional `updated` for a meaningful follow-up such as a documentary release. Keep corrections and later updates on the existing entry.
 - For events, add `date` for the first day and `end` for the final day of a multi-day event, using Santiago local dates. Include time, venue, directions, and visitor details as applicable on the event page. Keep past event pages accessible. Give each year's event its own dated URL.
-- Point homepage editorial hero links to the canonical publication or event page. A dated hero slide uses `data-expires` with a timezone-qualified timestamp. Keep slides and their corresponding dots in the same order. The homepage preview excludes individual sermons and items already linked from the hero.
+- Point homepage editorial hero links to the canonical publication or event page. A dated hero slide uses `data-expires` with a timezone-qualified timestamp. Keep slides and their corresponding dots in the same order. The homepage’s Últimas publicaciones list shows the three newest published entries by publication date, across all types. Items in the hero remain eligible.
 - For a multi-part work, link installments to the series reading order once there are enough published installments for a series page. Include original author, title, edition or year where known, translator, source link, and applicable permissions or credit on translations.
-- Run `python3 scripts/build-news.py` whenever the publication list or homepage hero links change. Include the refreshed `noticias/index.html` and homepage preview in the same change. Use `python3 scripts/build-news.py --check` to verify generated markup. Add new canonical pages to `sitemap.xml`.
+- Run `python3 scripts/build-news.py` whenever the publication list changes. Include the refreshed `noticias/index.html` and homepage preview in the same change. Use `python3 scripts/build-news.py --check` to verify generated markup. Add new canonical pages to `sitemap.xml`.
+
+## Site labels
+
+- Use familiar Spanish labels such as Recursos, Coro, and Últimas publicaciones. Avoid repeating “del Priorato” in generic headings and navigation. Use the parish name in branding and where it identifies a place, organization, or source.

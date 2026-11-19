@@ -93,10 +93,7 @@ def main():
         section("publicaciones-recientes", "Publicaciones recientes", [card(entry) for entry in recent]),
         section("eventos-pasados", "Eventos pasados", [card(entry, past=True) for entry in past]),
     ]), args.check)
-    hero = home.read_text(encoding="utf-8").split('id="hero-slides"', 1)[1].split('class="hero-controls"', 1)[0]
-    featured = set(re.findall(r'href="([^"]+)"', hero))
-    preview = [entry for entry in recent
-               if entry["url"] not in featured and not entry["url"].startswith("/sermones/")][:3]
+    preview = sorted(visible, key=lambda entry: entry["published"], reverse=True)[:3]
     replace_block(home, "NEWS PREVIEW", "\n".join(card(entry) for entry in preview), args.check)
 
 
