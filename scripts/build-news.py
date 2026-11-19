@@ -30,18 +30,19 @@ def card(entry, past=False):
     summary = f'<p>{escape(entry["summary"])}</p>' if entry.get("summary") else ""
     end = f' – {date_label(entry["end"])}' if "end" in entry else ""
     return (
-        f'        <li class="news-card" {attributes}><span class="section-kicker">{label}</span>'
-        f'<h3><a href="{escape(entry["url"])}">{escape(entry["title"])}</a></h3>'
+        f'        <li class="news-card" {attributes}>'
+        f'<a class="resource-card" href="{escape(entry["url"])}"><span class="section-kicker">{label}</span>'
+        f'<h3>{escape(entry["title"])}</h3>'
         f'<time datetime="{date}">{date_label(date)}</time>{f"<span>{end}</span>" if end else ""}'
-        f'{summary}</li>'
+        f'{summary}</a></li>'
     )
 
 
 def section(identifier, title, cards):
     return "\n".join([
         f'      <section id="{identifier}"{" hidden" if not cards else ""}>',
-        f'        <h2>{title}</h2>',
-        '        <ul class="news-grid">',
+        f'        <div class="section-title"><div><h2>{title}</h2></div></div>',
+        '        <ul class="resource-grid news-grid">',
         *cards,
         '        </ul>',
         '      </section>',
