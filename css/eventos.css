@@ -1,0 +1,131 @@
+.event-page {
+  --event-dark: #253a2e;
+  --event-accent: #f1d695;
+  --event-paper: #f4f0e5;
+  --event-line: #d9d5ca;
+}
+
+.event-page-retiro {
+  --event-dark: #20384d;
+  --event-paper: #edf1f5;
+  --event-line: #d4dce4;
+}
+
+.event-hero {
+  color: #fff;
+  background: var(--event-dark);
+}
+
+.event-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr);
+  align-items: center;
+  gap: clamp(1.8rem, 5vw, 4.5rem);
+  padding-block: clamp(2rem, 5vw, 4.75rem);
+}
+
+.event-hero h1 {
+  margin: .75rem 0 1rem;
+  font: 400 clamp(2.65rem, 6.3vw, 5.35rem)/1.02 var(--serif);
+  text-wrap: balance;
+}
+
+.event-hero-copy p {
+  margin: 0 0 1rem;
+}
+
+.event-hero .event-place {
+  font-weight: 600;
+}
+
+.event-date {
+  color: var(--event-accent);
+  font-size: .9rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.event-button {
+  display: inline-flex;
+  gap: .7rem;
+  margin-top: .45rem;
+  padding: .55rem 1rem;
+  border: 1px solid var(--event-accent);
+  color: var(--event-accent);
+  font-size: .9rem;
+}
+
+.event-button:hover {
+  background: var(--event-accent);
+  color: var(--event-dark);
+}
+
+.event-hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid #fff5;
+}
+
+.event-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(1.8rem, 5vw, 4.5rem);
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+.event-content h2 {
+  margin: 0 0 1rem;
+  font: 400 clamp(1.8rem, 3.3vw, 2.65rem)/1.1 var(--serif);
+}
+
+.event-schedule,
+.event-details {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-schedule li,
+.event-details > div {
+  display: grid;
+  grid-template-columns: minmax(4.2rem, .7fr) minmax(0, 2fr);
+  gap: .4rem 1rem;
+  padding: .85rem 0;
+  border-top: 1px solid var(--event-line);
+}
+
+.event-schedule time,
+.event-details dt {
+  color: var(--event-dark);
+  font-weight: 700;
+}
+
+.event-details dd {
+  margin: 0;
+}
+
+.event-contact {
+  padding: clamp(1rem, 3.5vw, 2rem);
+  background: var(--event-paper);
+  border-top: 2px solid var(--event-dark);
+}
+
+.event-contact h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+}
+
+.event-contact p {
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 720px) {
+  .event-hero-grid,
+  .event-content,
+  .event-details > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
