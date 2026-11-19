@@ -19,34 +19,46 @@ def date_label(value):
     return f"{int(day)} de {MONTHS[int(month) - 1]} de {value[:4]}"
 
 
-def card(entry, past=False):
+def card(entry, today, *, archive=False, eager=False):
     kind = entry["type"]
     date = entry.get("date", entry.get("updated", entry["published"]))
     attributes = f'data-type="{kind}"'
     label = LABELS[kind]
     if kind == "eventos":
-        attributes += f' data-event-end="{entry.get("end", date)}"'
-        label += f'<span data-past-label{"" if past else " hidden"}> pasado</span>'
-    summary = f'<p>{escape(entry["summary"])}</p>' if entry.get("summary") else ""
-    end = f' – {date_label(entry["end"])}' if "end" in entry else ""
-    return (
-        f'        <li class="news-card" {attributes}>'
-        f'<a class="resource-card" href="{escape(entry["url"])}"><span class="section-kicker">{label}</span>'
-        f'<h3>{escape(entry["title"])}</h3>'
-        f'<time datetime="{date}">{date_label(date)}</time>{f"<span>{end}</span>" if end else ""}'
-        f'{summary}</a></li>'
+        event_end = entry.get("end", date)
+        attributes += f' data-event-end="{event_end}"'
+        label += f'<span data-past-label{"" if event_end < today else " hidden"}> pasado</span>'
+    summary = escape(entry["summary"])
+    end = f'<span> – {date_label(entry["end"])}</span>' if "end" in entry else ""
+    timestamp = f'<time datetime="{date}">{date_label(date)}</time>{end}'
+    title = escape(entry["title"])
+    href = escape(entry["url"])
+    if not archive:
+        return (
+            f'        <li class="news-card" {attributes}><a class="resource-card" href="{href}">'
+            f'<span class="section-kicker">{label}</span><h3>{title}</h3>{timestamp}'
+            f'<p>{summary}</p></a></li>'
+        )
+
+    image = entry.get("image")
+    media = (
+        f'<div class="news-entry-image"><img src="{escape(image)}" alt="" '
+        f'loading="{"eager" if eager else "lazy"}" decoding="async"></div>'
+        if image else ""
     )
-
-
-def section(identifier, title, cards):
-    return "\n".join([
-        f'      <section id="{identifier}"{" hidden" if not cards else ""}>',
-        f'        <div class="section-title"><div><h2>{title}</h2></div></div>',
-        '        <ul class="resource-grid news-grid">',
-        *cards,
-        '        </ul>',
-        '      </section>',
-    ])
+    format_label = entry.get("format")
+    if format_label:
+        label += f' <span class="news-entry-format">{escape(format_label)}</span>'
+    return (
+        f'        <li class="news-entry{"" if image else " news-entry-text"}" {attributes} '
+        f'data-published="{entry["published"]}">\n'
+        f'          <a class="news-entry-link" href="{href}">{media}\n'
+        f'            <div class="news-entry-copy"><p class="news-entry-type">{label}</p>'
+        f'<h2>{title}</h2><p class="news-entry-summary">{summary}</p>'
+        f'<p class="news-entry-date">{timestamp}</p></div>\n'
+        '          </a>\n'
+        '        </li>'
+    )
 
 
 def replace_block(path, block, content, check):
@@ -79,22 +91,30 @@ def main():
             target /= "index.html"
         if url in urls or not url.startswith("/") or not target.is_file():
             raise SystemExit(f"Duplicate or missing publication URL: {url}")
+        if not entry.get("summary", "").strip():
+            raise SystemExit(f"Missing editorial summary: {url}")
+        image = entry.get("image")
+        if image and not (image.startswith("https://") or
+                          image.startswith("/") and (ROOT / image[1:]).is_file()):
+            raise SystemExit(f"Missing publication image: {image}")
         urls.add(url)
 
-    visible = [entry for entry in entries if entry["published"] <= today]
-    events = sorted((entry for entry in visible if entry["type"] == "eventos"),
-                    key=lambda entry: entry["date"])
-    upcoming = [entry for entry in events if entry.get("end", entry["date"]) >= today]
-    past = [entry for entry in reversed(events) if entry.get("end", entry["date"]) < today]
-    recent = sorted((entry for entry in visible if entry["type"] != "eventos"),
-                    key=lambda entry: entry.get("updated", entry["published"]), reverse=True)
+    visible = sorted((entry for entry in entries if entry["published"] <= today),
+                     key=lambda entry: entry["published"], reverse=True)
+    upcoming = min(
+        (entry for entry in visible if entry["type"] == "eventos"
+         and entry.get("end", entry["date"]) >= today),
+        key=lambda entry: entry["date"], default=None
+    )
+    archive_entries = [upcoming, *(entry for entry in visible if entry is not upcoming)] if upcoming else visible
+    archive_cards = [card(entry, today, archive=True, eager=index < 2)
+                     for index, entry in enumerate(archive_entries)]
     replace_block(archive, "NEWS ARCHIVE", "\n".join([
-        section("proximos-eventos", "Próximos eventos", [card(entry) for entry in upcoming]),
-        section("publicaciones-recientes", "Publicaciones recientes", [card(entry) for entry in recent]),
-        section("eventos-pasados", "Eventos pasados", [card(entry, past=True) for entry in past]),
+        '      <ul class="news-feed" aria-label="Publicaciones">',
+        *archive_cards,
+        '      </ul>',
     ]), args.check)
-    preview = sorted(visible, key=lambda entry: entry["published"], reverse=True)[:3]
-    replace_block(home, "NEWS PREVIEW", "\n".join(card(entry) for entry in preview), args.check)
+    replace_block(home, "NEWS PREVIEW", "\n".join(card(entry, today) for entry in visible[:3]), args.check)
 
 
 if __name__ == "__main__":
