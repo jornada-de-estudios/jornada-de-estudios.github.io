@@ -83,6 +83,7 @@
 </script>
   <link rel="stylesheet" href="css/anniversary.css?v=7">
   <link rel="stylesheet" href="css/home-hero.css?v=6">
+  <link rel="stylesheet" href="/css/noticias.css">
 </head>
 <body>
   <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -101,7 +102,7 @@
         </div>
         <nav class="primary-nav" aria-label="Navegación principal">
           <a href="horarios.html">Horarios</a>
-          <a href="calendario.html">Esta semana</a>
+          <a href="calendario.html">Esta semana</a><a href="/noticias/">Noticias y artículos</a>
           <a href="media.html">Media</a>
           <a href="recursos.html">Recursos</a>
         </nav>
@@ -114,6 +115,7 @@
           <span class="menu-heading" id="parish-menu-title">Priorato Cristo Rey</span>
           <a href="horarios.html">Horarios de Misa</a><a href="primera-vez.html">Primera vez en la Misa</a>
           <a href="calendario.html">Avisos y actividades</a>
+          <a href="/noticias/">Noticias y artículos</a>
           <a href="media.html">Media</a>
           <a href="recursos.html">Recursos del Priorato</a>
           <a href="centros.html">Centros de Misa</a>
@@ -145,15 +147,15 @@
       <div class="hero-slides" id="hero-slides" tabindex="0" aria-label="Destacados; deslice o use las flechas para explorar">
         <article class="hero-slide letter-slide is-active"><img class="letter-hero-painting" src="/img/priorato/tiepolo-inmaculada.webp" alt="" width="960" height="1764" fetchpriority="high"><div class="hero-caption"><span class="caption-kicker">Carta del Superior General · 4 de noviembre de 2026</span><h1>Alégrate, María</h1><p><em>«Alégrate, María, porque tú sola has aplastado todas las herejías que han aparecido en el mundo».</em></p><div class="letter-hero-actions"><a href="/recursos/carta-superior-general-2026-11-04.html">Leer la carta <span aria-hidden="true">›</span></a><a href="/pdf/lab_95_alegrate_maria_es.pdf" download>Descargar PDF <span aria-hidden="true">↓</span></a></div></div></article>
         <article class="hero-slide documentary-slide" style="--hero-image: url('/img/priorato/salus-animarum-trailer.jpg'); --hero-image-mobile: url('/img/priorato/salus-animarum-trailer.jpg')">
-          <div class="hero-caption"><span class="caption-kicker">Documental completo</span><h2>Salus animarum</h2><p>Documental sobre las consagraciones episcopales</p><a href="https://youtu.be/o4jD1Ln1_tI" target="_blank" rel="noopener">Ver documental <span aria-hidden="true">↗</span></a></div>
+          <div class="hero-caption"><span class="caption-kicker">Documental completo</span><h2>Salus animarum</h2><p>Documental sobre las consagraciones episcopales</p><a href="/noticias/salus-animarum.html">Ver documental <span aria-hidden="true">›</span></a></div>
         </article>
 
         <article class="hero-slide bulletin-slide">
           <div class="hero-caption"><span class="caption-kicker">Estrella Solitaria · Noviembre 2026 · N.º 18</span><h2>Historia y vida de la Iglesia</h2><p>Dos lecturas de la nueva edición del boletín del Priorato.</p><ul class="bulletin-hero-links"><li><a href="/boletin/202611/historia-fraternidad-chile-parte-2.html">Historia de la Fraternidad en Chile · Parte 2 <span aria-hidden="true">›</span></a></li><li><a href="/boletin/202611/la-alegria-de-los-santos.html">La alegría de los santos <span aria-hidden="true">›</span></a></li></ul><a href="/boletin/202611/">Ver la edición de noviembre <span aria-hidden="true">›</span></a></div>
         </article>
 
-        <article class="hero-slide rorate-slide" style="--hero-image: url('/img/priorato/rorate-caeli.jpg'); --hero-image-mobile: url('/img/priorato/rorate-caeli.jpg')">
-          <div class="hero-caption"><span class="caption-kicker"><time datetime="2026-12-05T05:00:00-03:00">Sábado 5 de diciembre · 05:00 AM</time></span><h2>Misa cantada<br><em>Rorate Caeli</em></h2><p>Misa de la Santísima Virgen María en Adviento.</p><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Cómo llegar <span aria-hidden="true">→</span></a></div>
+        <article class="hero-slide rorate-slide" data-expires="2026-12-06T00:00:00-03:00" style="--hero-image: url('/img/priorato/rorate-caeli.jpg'); --hero-image-mobile: url('/img/priorato/rorate-caeli.jpg')">
+          <div class="hero-caption"><span class="caption-kicker"><time datetime="2026-12-05T05:00:00-03:00">Sábado 5 de diciembre · 05:00 AM</time></span><h2>Misa cantada<br><em>Rorate Caeli</em></h2><p>Misa de la Santísima Virgen María en Adviento.</p><a href="/noticias/rorate-caeli-2026.html">Ver horario y ubicación <span aria-hidden="true">›</span></a></div>
         </article>
 
         <article class="hero-slide" style="--hero-image: url('/img/priorato/interior-iglesia-1600.webp'); --hero-image-mobile: url('/img/priorato/interior-iglesia-800.webp')">
@@ -201,6 +203,19 @@
       </div>
     </section>
 
+    <section class="section section-wash" aria-labelledby="news-title">
+      <div class="container">
+        <div class="section-title"><h2 id="news-title">Últimas publicaciones</h2><a class="line-link" href="/noticias/">Ver todas <span aria-hidden="true">›</span></a></div>
+        <ul class="news-grid">
+        <!-- BEGIN NEWS PREVIEW -->
+        <li class="news-card" data-type="articulos"><span class="section-kicker">Artículo</span><h3><a href="/recursos/profesion-de-fe-catolica.html">Profesión de fe católica</a></h3><time datetime="2026-11-04">4 de noviembre de 2026</time><p>Texto completo, referencias y descarga en PDF.</p></li>
+        <li class="news-card" data-type="articulos"><span class="section-kicker">Artículo</span><h3><a href="/primer-viernes.html">Primer viernes · Sagrado Corazón de Jesús</a></h3><time datetime="2026-11-04">4 de noviembre de 2026</time></li>
+        <li class="news-card" data-type="articulos"><span class="section-kicker">Artículo</span><h3><a href="/primer-sabado.html">Primer sábado · Inmaculado Corazón de María</a></h3><time datetime="2026-11-04">4 de noviembre de 2026</time></li>
+        <!-- END NEWS PREVIEW -->
+        </ul>
+      </div>
+    </section>
+
     <section class="section media-section" id="media" aria-labelledby="media-title">
       <div class="container">
         <div class="section-title"><div><span class="section-kicker">Videos y transmisiones</span><h2 id="media-title">Media</h2></div><a class="line-link" href="https://www.youtube.com/@fsspxchileprioratocristorey/streams" target="_blank" rel="noopener">Ver el canal <span aria-hidden="true">›</span></a></div>
@@ -229,9 +244,9 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="primera-vez.html">Primera vez en la Misa</a><a href="horarios.html">Horarios</a><a href="calendario.html">Esta semana</a><a href="centros.html">Centros de Misa</a><a href="media.html">Media</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
+  <footer class="site-footer"><div class="container footer-top"><a class="brand brand-footer" href="#inicio"><img class="brand-logo" src="img/sspx_logo_white_wobg.png" alt="" width="520" height="520"><span class="brand-copy"><strong>Priorato Cristo Rey</strong><small>Santiago de Chile</small></span></a><div class="footer-links"><a href="primera-vez.html">Primera vez en la Misa</a><a href="horarios.html">Horarios</a><a href="calendario.html">Esta semana</a><a href="/noticias/">Noticias y artículos</a><a href="centros.html">Centros de Misa</a><a href="media.html">Media</a><a href="recursos.html">Recursos</a></div></div><div class="container footer-contact"><a href="https://maps.app.goo.gl/mGcGi3qFsZ8JMMnSA" target="_blank" rel="noopener">Talavera de la Reina 430, Las Condes, Santiago de Chile</a><a href="mailto:priorato.cristo.rey@gmail.com">priorato.cristo.rey@gmail.com</a><a href="https://www.youtube.com/@fsspxchileprioratocristorey" target="_blank" rel="noopener">Canal del Priorato en YouTube</a></div><div class="container footer-bottom"><span>© 2026 Priorato Cristo Rey</span><span>Fraternidad Sacerdotal San Pío X</span></div></footer>
 
-  <script src="js/hero-carousel.js?v=2" defer></script>
+  <script src="js/hero-carousel.js?v=3" defer></script>
   <script>
     const pullouts = document.querySelector('#site-pullouts');
     const menuButton = document.querySelector('.menu-button');

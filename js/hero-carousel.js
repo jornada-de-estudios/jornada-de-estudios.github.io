@@ -4,6 +4,15 @@
   const track = hero.querySelector('.hero-slides');
   const slides = [...track.querySelectorAll('.hero-slide')];
   const dots = [...hero.querySelectorAll('.hero-dot')];
+  for (let index = slides.length - 1; index >= 0; index--) {
+    if (Date.parse(slides[index].dataset.expires) <= Date.now() && slides.length > 1) {
+      slides[index].remove();
+      dots[index].remove();
+      slides.splice(index, 1);
+      dots.splice(index, 1);
+    }
+  }
+  track.scrollLeft = 0;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   let active = 0, paused = reduced.matches, timer, settle;
   function render() {
