@@ -15,7 +15,7 @@
 - For decorative images, use empty alternative text (`alt=""`) and no caption. Never add filler captions such as “Imagen editorial creada para acompañar el artículo”.
 - Keep decorative artwork directly related to the article's subject and visual style.
 
-## First Friday and First Saturday calendar updates
+## Weekly calendar updates
 
 When updating `calendario.html`, including transcribing an uploaded calendar image:
 
@@ -24,7 +24,8 @@ When updating `calendario.html`, including transcribing an uploaded calendar ima
 - Preserve the image's actual times and exceptions. Never add an unannounced celebration or replace a dated exception with a landing page's usual schedule.
 - Keep the homepage's existing devotion paragraphs, with a “Más información” link in each paragraph.
 - Run `python3 scripts/check-calendar-devotions.py` after every calendar update and resolve missing links before committing.
-- Keep changing dates and exceptional schedules in the weekly calendar; the landing pages explain the usual practice. January and February usually end First Friday adoration at midnight.
+- Keep changing dates and exceptional schedules in the weekly calendar; the devotion landing pages explain the usual practice. January and February usually end First Friday adoration at midnight.
+- Review event entries in `noticias/publicaciones.json` on each weekly calendar update. Use the event’s `end` date, or `date` for a one-day event, in Santiago local time. Once that day has passed, update the linked event page if it still reads like an invitation. Put **Evento pasado** above the title, state when it took place, retain the original URL and program, and remove attendance, directions, ticket sales, and registration calls to action. Link to any existing sermon, photos, or recap that belongs to the event. If it was canceled or postponed, state that status according to the available information.
 
 ## Sermon publishing scope
 
